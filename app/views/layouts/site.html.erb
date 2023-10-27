@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>.:: Sempre Chique ::.</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+        <%= csrf_meta_tags %>
+        <%= csp_meta_tag %>
+
+        <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+        <%= javascript_importmap_tags %>
+
+        <link rel="stylesheet" href="/templete-site/css/owl.carousel.min.css">
+        <link rel="shortcut icon" href="/templete-site/img/favicon.png" type="image/png">
+        <link rel="stylesheet" href="/templete-site/css/slick.css">
+        <link rel="stylesheet" href="/templete-site/css/slick-theme.css">
+        <link rel="stylesheet" href="/templete-site/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="/templete-site/css/jquery.fancybox.min.css">
+        <link rel="stylesheet" type="text/css" href="/templete-site/css/style.css">
+
+    </head>
+
+    <body>
+        <%= yield %>
+
+
+
+        <a href="#" class="scroll_top"><i class="ion-ios-arrow-up"></i></a>
+
+        <script src="/templete-site/js/jquery.js"></script>
+        <script src="/templete-site/js/bootstrap.js"></script>
+        <script src="/templete-site/js/headroom.min.js"></script>
+        <script src="/templete-site/js/owl.carousel.min.js"></script>
+        <script src="/templete-site/js/slick.min.js"></script>
+        <script src="/templete-site/js/jquery.fancybox.min.js"></script>
+        <script src="/templete-site/js/main.js"></script>
+        
+        <script>
+            $(".awemenu-nav").headroom();   
+        </script>
+
+
+    </body>
+</html>
