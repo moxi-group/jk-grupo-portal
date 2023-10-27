@@ -23,7 +23,11 @@
     </head>
 
     <body>
-        <%= yield %>
+        <div class="wrappage">
+            <%= render 'layouts/partials/header' %>
+            <%= yield %>
+            <%= render 'layouts/partials/footer' %>
+        </div>
 
 
 
