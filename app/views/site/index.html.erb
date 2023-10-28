@@ -2,9 +2,9 @@
 <div class="page-right-content">
     <div class="slider slider-home1">
         <div class="js-slider-home1">
-            <img src="/templete-site/img/slider_1_1.jpg" alt="">
-            <img src="/templete-site/img/slider_1_2.jpg" alt="">
-            <img src="/templete-site/img/slider_1_3.jpg" alt="">
+            <%= image_tag("site/slides/slide1.png", class: "") %>
+            <%= image_tag("site/slides/slide2.png", class: "") %>
+            <%= image_tag("site/slides/slide3.png", class: "") %>
         </div>
         <div class="btn-slider">
             <a href="#" class="btn-arrow top-arrow"></a>
@@ -15,7 +15,7 @@
 
 <div class="video">
     <a data-fancybox href="https://www.youtube.com/watch?v=wLOqbxP8nPs&ab_channel=LwandoNyhweba" class="hover-images image-video">
-        <img src="/templete-site/img/video.jpg" alt="" class="img-responsive">
+        <%= image_tag("site/play.png", class: "img-responsive img-thumbnail") %>
     </a>
     <div class="video-title">
         <h3>Ontem Sonho <br> Hoje Realidade</h3>
@@ -28,25 +28,28 @@
         <div class="row">
             <div class="col-xs-6 col-sm-3 col-md-3 c-item">
                 <a href="#" class="hover-images">
-                    <%= image_tag("site/collection.png", class: "img-reponsive img-thumbnail") %>
+                    <%= image_tag("site/collections/collection1.png", class: "img-reponsive img-thumbnail") %>
                 </a>
                 <h3 class="h-colect-title">Destaque 1</h3>
             </div>
+
             <div class="col-xs-6 col-sm-3 col-md-3 c-item">
                 <a href="#" class="hover-images">
-                    <%= image_tag("site/collection.png", class: "img-reponsive img-thumbnail") %>
+                    <%= image_tag("site/collections/collection5.png", class: "img-reponsive img-thumbnail") %>
                 </a>
-                <h3 class="h-colect-title">Destaque 2</h3>
+                <h3 class="h-colect-title">Destaque 4</h3>
             </div>
+
             <div class="col-xs-6 col-sm-3 col-md-3 c-item">
                 <a href="#" class="hover-images">
-                    <%= image_tag("site/collection.png", class: "img-reponsive img-thumbnail") %>
+                    <%= image_tag("site/collections/collection4.png", class: "img-reponsive img-thumbnail") %>
                 </a>
-                <h3 class="h-colect-title">Destaque 3</h3>
+                <h3 class="h-colect-title">Destaque 4</h3>
             </div>
+
             <div class="col-xs-6 col-sm-3 col-md-3 c-item">
                 <a href="#" class="hover-images">
-                    <%= image_tag("site/collection.png", class: "img-reponsive img-thumbnail") %>
+                    <%= image_tag("site/collections/collection6.png", class: "img-reponsive img-thumbnail") %>
                 </a>
                 <h3 class="h-colect-title">Destaque 4</h3>
             </div>
@@ -124,7 +127,7 @@
         </div>
     </div>
     <div class="fea-button text-center">
-        <a href="#" class="btn-viewshop">Fale connsoco</a>
+        <a href="<%= contact_path %>" class="btn-viewshop">Fale connsoco</a>
     </div>
 </div>
 
