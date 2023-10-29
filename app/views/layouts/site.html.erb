@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>.:: Sempre Chique ::.</title>
+        <title>.:: Grupo JK ::.</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
@@ -12,38 +12,46 @@
         <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
         <%= javascript_importmap_tags %>
 
-        <link rel="stylesheet" href="/templete-site/css/owl.carousel.min.css">
-        <link rel="shortcut icon" href="/templete-site/img/favicon.png" type="image/png">
-        <link rel="stylesheet" href="/templete-site/css/slick.css">
-        <link rel="stylesheet" href="/templete-site/css/slick-theme.css">
-        <link rel="stylesheet" href="/templete-site/css/owl.theme.default.min.css">
-        <link rel="stylesheet" href="/templete-site/css/jquery.fancybox.min.css">
-        <link rel="stylesheet" type="text/css" href="/templete-site/css/style.css">
+        <!-- CSS FILES -->
+        <link rel="stylesheet" href="/templete-site/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/templete-site/css/animate.min.css">
+        <link rel="stylesheet" href="/templete-site/css/fancybox.min.css">
+        <link rel="stylesheet" href="/templete-site/css/odometer.min.css">
+        <link rel="stylesheet" href="/templete-site/css/swiper.min.css">
+        <link rel="stylesheet" href="/templete-site/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/templete-site/css/style.css">
 
     </head>
 
     <body>
-        <div class="wrappage">
-            <%= render 'layouts/partials/header' %>
-            <%= yield %>
-            <%= render 'layouts/partials/footer' %>
+
+        <div class="preloader">
+            <div class="layer"></div>
+            <div class="inner">
+                <figure> <img src="/templete-site/images/loading.gif" alt="Image"> </figure>
+                <span class="typewriter" id="typewriter"></span> 
+            </div>
         </div>
+        <%= yield %>
+
+        <%# render 'layouts/partials/header' %>
+        <%# render 'layouts/partials/footer' %>
+
+        <!-- JS FILES --> 
+        <script src="/templete-site/js/jquery.min.js"></script>
+        <script src="/templete-site/js/bootstrap.min.js"></script> 
+        <script src="/templete-site/js/swiper.min.js"></script> 
+        <script src="/templete-site/js/jquery.stellar.js"></script> 
+        <script src="/templete-site/js/isotope.min.js"></script> 
+        <script src="/templete-site/js/imagesloaded.pkgd.min.js"></script> 
+        <script src="/templete-site/js/jquery.typewriter.js"></script> 
+        <script src="/templete-site/js/odometer.min.js"></script>  
+        <script src="/templete-site/js/fancybox.min.js"></script> 
+        <script src="/templete-site/js/wow.min.js"></script> 
+        <script src="/templete-site/js/scripts.js"></script>
 
 
 
-        <a href="#" class="scroll_top"><i class="ion-ios-arrow-up"></i></a>
-
-        <script src="/templete-site/js/jquery.js"></script>
-        <script src="/templete-site/js/bootstrap.js"></script>
-        <script src="/templete-site/js/headroom.min.js"></script>
-        <script src="/templete-site/js/owl.carousel.min.js"></script>
-        <script src="/templete-site/js/slick.min.js"></script>
-        <script src="/templete-site/js/jquery.fancybox.min.js"></script>
-        <script src="/templete-site/js/main.js"></script>
-        
-        <script>
-            $(".awemenu-nav").headroom();   
-        </script>
 
 
     </body>
