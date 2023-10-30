@@ -7,4 +7,4 @@ set :deploy_to, "/opt/projects/#{fetch :application}"
 
 append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', '.bundle', 'public/system', 'public/uploads'
 
-set :keep_releases, 5
+set :keep_releases, 3
