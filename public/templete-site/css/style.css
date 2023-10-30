@@ -878,7 +878,7 @@ a {
   display: inline-block;
   border-radius: 54px;
   border-bottom: 4px solid rgba(0, 0, 0, 0.2);
-  background: url('/images/site/icons/btn-bg.jpg');
+  background: url('./images/site/icons/btn-bg.jpg');
   background-size: cover;
   color: #fff;
   font-weight: 800;
@@ -1520,7 +1520,7 @@ main {
   display: flex;
   flex-wrap: wrap;
   padding: 100px 0;
-  background: url('/images/site/bg-shape-pattern.jpg') center no-repeat;
+  background: url('./images/site/bg-shape-pattern.jpg') center no-repeat;
   background-size: auto 150%;
 }
 
@@ -1822,7 +1822,7 @@ main {
   display: flex;
   flex-wrap: wrap;
   padding: 100px 0;
-  background: url('/images/site/bg-shape-pattern.jpg') center no-repeat;
+  background: url('./images/site/bg-shape-pattern.jpg') center no-repeat;
   background-size: auto 100%;
 }
 
@@ -1864,7 +1864,7 @@ main {
   font-size: 28px;
   font-weight: 800;
   margin-bottom: 20px;
-  background: url('/images/site/icons/btn-bg.jpg') center;
+  background: url('./images/site/icons/btn-bg.jpg') center;
   -webkit-background-clip: text;
   color: transparent;
   background-size: auto 100%;
