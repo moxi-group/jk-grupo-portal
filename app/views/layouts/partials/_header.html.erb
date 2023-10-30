@@ -1,84 +1,115 @@
-<header id="header" class="header-v2 v-sidebar">
-    <div class="awemenu-nav headroom" data-responsive-width="1200">
-        <div class="container container-75 hidden-xs hidden-sm">
-            <div class="vow-topbar v2 v-remove">
-                <div class="topbar-left">
-                    <div class="has-element l-center">
-                        <a href="#">geral@sempre-chique.com</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="vow-topbar v2 sticky">
-                <div class="topbar-left">
-                    <div class="has-element l-center">
-                        <a href="#">geral@sempre-chique.com</a>
-                    </div>
-                </div>
-
-                <nav class="main-menu js-open-menu">
-                    <div class="collapse navbar-collapse">
-                        <ul class="nav navbar-nav js-menubar">
-                            <li class="level1 active"><a href="<%= root_path %>">Home</a></li>
-                            <li class="level1 active"><a href="<%= services_path %>">Serviços</a></li>
-                            <li class="level1 active"><a href="<%= about_path %>">Sobre</a></li>
-                            <li class="level1 active"><a href="<%= contact_path %>">Contacto</a></li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
-        </div>
-
-        <div class="container container-75 hidden-md hidden-lg">
-            <div class="vow-topbar v2">
-                <div class="topbar-mobile-l">
-                    <div class="has-element l-center">
-                        <a href="#">geral@sempre-chique.com</a>
-                    </div>
-                </div>
-                <div class="topbar-right">
-                    <div class="logo v3"><img src="/templete-site/img/vow-logo.png" alt="logo"></div>
-                    <button type="button" class="navbar-toggle vow-icon-menu v4 js-menu icon-mobile hidden-lg hidden-md" data-toggle="collapse" data-target="#myNavbar2">
-                        <span class="vow-iconbar"></span>
-                        <span class="vow-iconbar"></span>
-                        <span class="vow-iconbar"></span>
-                    </button>
-                </div>
-                <nav class="main-menu js-open-menu">
-                    <div class="collapse navbar-collapse" id="myNavbar2">
-                        <ul class="nav navbar-nav js-menubar">
-                            <li class="level1 active"><a href="<%= root_path %>">Home</a></li>
-                            <li class="level1 active"><a href="<%= services_path %>">Serviços</a></li>
-                            <li class="level1 active"><a href="<%= about_path %>">Sobre</a></li>
-                            <li class="level1 active"><a href="<%= contact_path %>">Contacto</a></li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
-        </div>
+<!-- end preloader -->
+<div class="navigation-menu">
+    <div class="nav-bg"></div>
+    <!-- end nav-bg -->
+    <div class="nav-bg2"></div>
+    <!-- end nav-bg2 -->
+    <div class="inner">
+        <address>
+            <span>ENDEREÇO</span>
+            <p> 21 De Janeiro. No : 126<br>
+                Kilamba Kiaxi<br>
+                Luanda - Angola 
+            </p>
+        </address>
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">SERVIÇOS</a></li>
+            <li><a href="#">EMPRESAS</a></li>
+            <li><a href="#">CONTACTO</a></li>
+        </ul>
     </div>
-</header>
-
-
-<div class="page-left-sidebar">
-    <div class="navbar-wrapper">
-        <div class="logo v3 hidden-xs hidden-sm">
-            <img src="/templete-site/img/vow-logo.png" alt="logo">
-        </div>
-        <nav class="main-menu v3 hidden-xs hidden-sm">
-            <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav v3">
-                    <li class="level1 active"><a href="<%= root_path %>">Home</a></li>
-                    <li class="level1 active"><a href="<%= services_path %>">Serviços</a></li>
-                    <li class="level1 active"><a href="<%= about_path %>">Sobre</a></li>
-                    <li class="level1 active"><a href="<%= contact_path %>">Contacto</a></li>
-                </ul>
-            </div>
-        </nav>
-        <div class="social-menu v3 hidden-xs hidden-sm">
-            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-        </div>
-    </div>
+    <!-- end inner -->
 </div>
+<!-- end navigation-menu -->
+<div class="transition-overlay">
+    <div class="layer"></div>
+    <!-- end layer -->
+</div>
+<!-- end transition-overlay -->
+<nav class="navbar">
+    <div class="logo"> <a href="index.html"><img src="/logo.png" alt="Image"></a> </div>
+    <!-- end logo -->
+    <div class="sandwich-nav">
+        <div class="sandwich-text"><b>MENU<br>
+            FECHAR</b> 
+        </div>
+        <!-- end sandwich-text -->
+        <div class="sandwich-btn" id="sandwich-btn"> <span></span> <span></span> </div>
+        <!-- end sandwich-btn -->
+    </div>
+    <!-- end sandwich-nav -->
+</nav>
+<!-- end navbar -->
+<header class="header">
+    <aside class="soundbar">
+        <div class="sound">
+            <div class="sound-title"> SOUND </div>
+            <!-- end sound-title -->
+            <div class="equalizer">
+                <div class="holder"> <span></span> <span></span> <span></span> <span></span><span></span><span></span> </div>
+                <!-- end holder -->
+            </div>
+            <!-- end equalizer -->
+            <div class="sound-text"> <b>OFF<br>
+                ON</b> 
+            </div>
+            <!-- end sound-text -->
+        </div>
+        <!-- end sound -->
+    </aside>
+    <!-- end soundbar -->
+    <ul class="social-media">
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">LinkdIn</a></li>
+    </ul>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="slide-inner bg-image" data-background="/assets/site/slides/slide1.png">
+                    <div class="container">
+                        <h5 data-swiper-parallax="-200">Descriptin from the <span>partial</span> uses</h5>
+                        <h2 data-swiper-parallax="-300">Inovando Por Você</h2>
+                    </div>
+                    <!-- end container -->
+                </div>
+                <!-- end slide-inner -->
+            </div>
+            <!-- end swiper-slide -->
+            <div class="swiper-slide">
+                <div class="slide-inner bg-image" data-background="/assets/site/slides/slide2.png">
+                    <div class="container">
+                        <h5 data-swiper-parallax="-200">Benefit from the <span>partial</span> uses</h5>
+                        <h2 data-swiper-parallax="-300">Novas Conexões</h2>
+                        <a href="videos/video.mp4" data-swiper-parallax="-100" class="btn-play" data-fancybox><img
+                            src="/templete-site/images/icon-play.svg" alt="Image"></a>
+                    </div>
+                    <!-- end container -->
+                </div>
+                <!-- end slide-inner -->
+            </div>
+            <!-- end swiper-slide -->
+            <div class="swiper-slide">
+                <div class="slide-inner bg-image" data-background="/assets/site/slides/slide3.png">
+                    <div class="container">
+                        <h5 data-swiper-parallax="-200">Designing from the <span>partial</span> uses</h5>
+                        <h2 data-swiper-parallax="-300">Outro Texto</h2>
+                    </div>
+                    <!-- end container -->
+                </div>
+                <!-- end slide-inner -->
+            </div>
+            <!-- end swiper-slide -->
+        </div>
+        <!-- end swiper-wrapper -->
+        <div class="swiper-pagination"></div>
+        <!-- end swiper-pagination -->
+        <div class="swiper-button-next"><span data-hover="NEXT">NEXT</span></div>
+        <!-- end swiper-button-next -->
+        <div class="swiper-button-prev"><span data-hover="PREV">PREV</span></div>
+        <!-- end swiper-button-prev -->
+    </div>
+    <!-- end swiper-container -->
+</header>
+<!-- end header -->

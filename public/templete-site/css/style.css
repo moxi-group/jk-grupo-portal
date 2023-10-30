@@ -1520,7 +1520,7 @@ main {
   display: flex;
   flex-wrap: wrap;
   padding: 100px 0;
-  background: url(../images/bg-shape-pattern.jpg) center no-repeat;
+  background: url('/assets/bg-shape-pattern.jpg') center no-repeat;
   background-size: auto 150%;
 }
 
@@ -1822,7 +1822,7 @@ main {
   display: flex;
   flex-wrap: wrap;
   padding: 100px 0;
-  background: url(../images/bg-shape-pattern.jpg) center no-repeat;
+  background: url('/assets/bg-shape-pattern.jpg') center no-repeat;
   background-size: auto 100%;
 }
 
@@ -1864,7 +1864,7 @@ main {
   font-size: 28px;
   font-weight: 800;
   margin-bottom: 20px;
-  background: url(../images/btn-bg.jpg) center;
+  background: url('/assets/site/icons/btn-bg.jpg') center;
   -webkit-background-clip: text;
   color: transparent;
   background-size: auto 100%;
@@ -1873,7 +1873,7 @@ main {
 .services-content-block .content-box ul {
   width: 100%;
   margin: 0;
-  padding: 0;
+  padding: 30px 20px !important;
   font-size: 16px;
   font-family: "Libre Baskerville", serif;
   color: #8f999a;

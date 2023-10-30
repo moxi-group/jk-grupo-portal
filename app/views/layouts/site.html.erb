@@ -26,16 +26,16 @@
     <body>
 
         <div class="preloader">
-            <div class="layer"></div>
             <div class="inner">
-                <figure> <img src="/templete-site/images/loading.gif" alt="Image"> </figure>
                 <span class="typewriter" id="typewriter"></span> 
             </div>
         </div>
-        <%= yield %>
 
-        <%# render 'layouts/partials/header' %>
-        <%# render 'layouts/partials/footer' %>
+        <%= render 'layouts/partials/header' %>
+        <main>
+            <%= yield %>
+            <%= render 'layouts/partials/footer' %>
+        </main>
 
         <!-- JS FILES --> 
         <script src="/templete-site/js/jquery.min.js"></script>
@@ -49,10 +49,6 @@
         <script src="/templete-site/js/fancybox.min.js"></script> 
         <script src="/templete-site/js/wow.min.js"></script> 
         <script src="/templete-site/js/scripts.js"></script>
-
-
-
-
 
     </body>
 </html>
