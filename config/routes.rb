@@ -2,6 +2,7 @@ Rails.application.routes.draw do
     root 'site#index'
 
     get '/services',    to: 'site#services',    as: 'services'
+    get '/companies',    to: 'site#companies',    as: 'companies'
     get '/about',       to: 'site#about',       as: 'about'
     get '/contact',     to: 'site#contact',     as: 'contact'
 

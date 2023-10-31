@@ -13,6 +13,10 @@ class SiteController < ApplicationController
     def contact
     end
 
+    def companies
+        
+    end
+
 
     
 

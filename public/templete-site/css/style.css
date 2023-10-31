@@ -399,7 +399,7 @@ a {
   content: "";
   width: 0;
   height: 10px;
-  background: #00bbcc;
+  background: #2c2e84;
   position: absolute;
   left: 0;
   bottom: 17px;
@@ -635,7 +635,7 @@ a {
   content: "";
   width: 0;
   height: 6px;
-  background: #00bbcc;
+  background: #2c2e84;
   position: absolute;
   left: 0;
   bottom: 2px;
@@ -822,7 +822,7 @@ a {
   content: "";
   width: 60%;
   height: 70px;
-  background: #35aa48;
+  background: #2c2e84;
   position: absolute;
   left: 40px;
   bottom: 0;
@@ -856,7 +856,7 @@ a {
   content: "";
   width: 100%;
   height: 7px;
-  background: #00bbcc;
+  background: #2c2e84;
   position: absolute;
   left: 0;
   bottom: 5px;
@@ -1266,7 +1266,7 @@ main {
   content: "";
   width: 0;
   height: 6px;
-  background: #00bbcc;
+  background: #2c2e84;
   position: absolute;
   left: 0;
   bottom: 2px;
@@ -1338,6 +1338,7 @@ main {
   font-size: 6vw;
   font-weight: 800;
   line-height: 1;
+  color: #2c2e84;
 }
 
 .works .works-title p {
@@ -1530,6 +1531,7 @@ main {
   margin-bottom: 20px;
   margin-top: 20px;
   text-transform: uppercase;
+  color: green;
 }
 
 .awards p {
@@ -1705,6 +1707,7 @@ main {
   font-size: 6vw;
   font-weight: 800;
   margin-bottom: 50px;
+  color: #2c2e84;
 }
 
 .clients h6 {
