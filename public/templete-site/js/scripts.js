@@ -15,7 +15,7 @@
 
 			// SANDWICH MENU AUDIO
 			document.getElementById("sandwich-btn").addEventListener('click', function(e) {
-			document.getElementById("link").play();
+			//document.getElementById("link").play();
 	  	});
 		
 		
