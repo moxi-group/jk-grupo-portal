@@ -373,7 +373,7 @@ a {
 
 .navigation-menu .inner ul li a {
   float: right;
-  font-size: 4vw;
+  font-size: 2.5vw;
   color: #fff;
   font-weight: 800;
   transform: translateY(200%);
@@ -2387,7 +2387,7 @@ main {
   display: flex;
   flex-wrap: wrap;
   padding: 100px 0;
-  background: #313434;
+  background: #2c2e84;
   text-align: center;
 }
 
@@ -2438,7 +2438,7 @@ main {
   display: flex;
   flex-wrap: wrap;
   padding: 40px 40px;
-  background: #313434;
+  background: #191a5b;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
   font-family: "Libre Baskerville", serif;
 }

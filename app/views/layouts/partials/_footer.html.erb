@@ -16,9 +16,8 @@
         </div>
         <!-- end content-box -->
         <div class="content-box wow fadeIn" data-wow-delay="0.2s">
-            <h2>QUER FAZER PARTE DO GRUPO?</h2>
-            <p>To see currently open positions<br>
-                career [at] verno.com.ua
+            <p>
+                <%= link_to 'ADERIR AO GRUPO', root_path, class: "btn btn-aderir" %>
             </p>
         </div>
         <!-- end content-box -->
@@ -30,9 +29,11 @@
     <div class="container wow fadeIn">
         <small>Todos os Direitos Reservados 2022 - <%= Time.now.strftime('%Y') %> © Grupo JK</small>
         <ul>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Instagram</a></li>
-            <li><a href="#">LinkdIn</a></li>
+            <li><a href="#" target="_blank"><%= image_tag '/assets/icons/facebook.png', width: '50' %></a></li>
+            <li><a href="#" target="_blank"><%= image_tag '/assets/icons/instagram.png', width: '50' %></a></li>
+            <li><a href="#" target="_blank"><%= image_tag '/assets/icons/linkedin.png', width: '50' %></a></li>
+            <li><a href="#" target="_blank"><%= image_tag '/assets/icons/youtube.png', width: '50' %></a></li>
+            <li><a href="#" target="_blank"><%= image_tag '/assets/icons/twitter.png', width: '50' %></a></li>
         </ul>
     </div>
     <!-- end container -->
