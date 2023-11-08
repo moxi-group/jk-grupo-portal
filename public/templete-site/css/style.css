@@ -1226,7 +1226,7 @@ main {
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
-  background: url(/images/site/help.png) center;
+  /*background: url(/images/site/help.png) center;*/
   background-size: cover;
 }
 

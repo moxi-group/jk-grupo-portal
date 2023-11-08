@@ -31,9 +31,55 @@
             </div>
         </div>
 
-
         <%= yield %>
 
-
+        <a class="whatsapp pulse" href="https://api.whatsapp.com/message/V4YJVYLLWUTVA1" target="_blank"><%= image_tag '/assets/icons/whatsapp.png', width: '80' %></a>
     </body>
 </html>
+
+<style>
+
+    .whatsapp{
+        position: fixed;
+        right: 2%;
+        bottom: 10%;
+        z-index: 10;
+    }
+    .pulse { 
+        transform: translate(-100, -50%); 
+        width: 50px; 
+        height: 50px; 
+        background: #35aa49; 
+        border: 2px solid #35aa49; 
+        border-radius: 50%; 
+        box-sizing: border-box; 
+        box-shadow: 0 0 0 36px #242563, 0 0 0 40px #35aa49; 
+    } 
+
+    .pulse:before, .pulse:after { 
+        content: ''; 
+        position: absolute; 
+        left: -30px; 
+        top: -30px; 
+        right: -30px; 
+        bottom: -30px; 
+        border: 2px solid #33ff00; 
+        border-radius: 50%; 
+        animation: animate 2s linear infinite 
+    } 
+
+    .pulse:after { 
+        animation-delay: 1s; 
+    } 
+
+    @keyframes animate { 
+        0% { 
+            transform: scale(2.0); 
+        } 
+
+        100% { 
+            transform: scale(0.7); 
+        } 
+    } 
+        
+</style>
