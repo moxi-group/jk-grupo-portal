@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :settings
   resources :contact_forms
     root 'site#index'
 

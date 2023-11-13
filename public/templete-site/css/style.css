@@ -313,14 +313,27 @@ a {
   position: absolute;
   left: 0;
   top: 0;
+  background: url(/menu.png) center no-repeat !important;
   background: #35aa48;
   transition-delay: 0.8s;
+}
+
+.nav-bg {
+  background: url(/menu.png) center no-repeat !important;
+}
+
+.nav-bg2 {
+  background: url(/menu.png) center no-repeat !important;
+}
+
+.nav-bg2 {
+  background: url(/menu.png) center no-repeat !important;
 }
 
 .navigation-menu .inner {
   position: relative;
   z-index: 2;
-  padding: 0 40px;
+  padding: 0 100px;
 }
 
 .navigation-menu .inner address {
@@ -678,7 +691,7 @@ a {
 }
 
 .navbar .logo a img {
-  height: 50px;
+  height: 100px;
 }
 
 .navbar .sandwich-nav {

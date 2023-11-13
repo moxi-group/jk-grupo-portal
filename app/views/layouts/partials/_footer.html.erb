@@ -2,7 +2,11 @@
     <div class="container">
         <div class="content-box wow fadeIn" data-wow-delay="0s">
             <h2>ENDEREÇO</h2>
-            <p>Bairro Nova vida , distrito urbano do Talatona,Rua da Agomart Talatona, Edifício Sempre Chique casa S/N<br>Luanda - Angola </p>
+            <p>
+                <%= setting.street %>
+                <br>
+                <%= setting.address %>
+            </p>
         </div>
         <!-- end content-box -->
         <div class="content-box wow fadeIn" data-wow-delay="0.1s">
@@ -24,7 +28,7 @@
 <!-- end footer -->
 <footer class="sub-footer">
     <div class="container wow fadeIn">
-        <small>Todos os Direitos Reservados 2022 - <%= Time.now.strftime('%Y') %> © Grupo JK Comercial</small>
+        <small>Todos os Direitos Reservados 2022 - <%= Time.now.strftime('%Y') %> © <%= setting.name %></small>
         <ul>
             <li><a href="https://web.facebook.com/profile.php?id=61550645407414" target="_blank"><%= image_tag '/images/networks/facebook.png', width: '50' %></a></li>
             <li><a href="https://www.instagram.com/grupo_jk_comercial/" target="_blank"><%= image_tag '/images/networks/instagram.png', width: '50' %></a></li>
