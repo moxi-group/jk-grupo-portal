@@ -36,3 +36,11 @@
     background: rgb(66, 134, 77);
     background: linear-gradient(90deg, rgba(66, 134, 77, 1) 0%, rgba(53, 170, 73, 1) 35%, rgba(44, 46, 132, 1) 100%);
 }
+
+.nav-bg {
+    background: url(/menu.png) center no-repeat !important;
+}
+
+.nav-bg2 {
+    background: url(/menu.png) center no-repeat !important;
+}

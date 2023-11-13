@@ -318,18 +318,6 @@ a {
   transition-delay: 0.8s;
 }
 
-.nav-bg {
-  background: url(/menu.png) center no-repeat !important;
-}
-
-.nav-bg2 {
-  background: url(/menu.png) center no-repeat !important;
-}
-
-.nav-bg2 {
-  background: url(/menu.png) center no-repeat !important;
-}
-
 .navigation-menu .inner {
   position: relative;
   z-index: 2;
