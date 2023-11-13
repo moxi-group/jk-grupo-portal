@@ -16,7 +16,7 @@
                 <div class="col-md-6 wow fadeIn">
                     <div class="contact-box">
                         <h6>NOSSO ENDEREÇO</h6>
-            <p>Bairro Nova vida , distrito urbano do Talatona,Rua da Agomart Talatona, Edifício Sempre Chique casa S/N<br>Luanda - Angola </p>
+                        <p>Bairro Nova vida , distrito urbano do Talatona,Rua da Agomart Talatona, Edifício Sempre Chique casa S/N<br>Luanda - Angola </p>
 
                     </div>
                     <!--end contact-box -->
@@ -46,35 +46,30 @@
                 </div>
                 <!-- end col-5 -->
                 <div class="col-md-6 wow fadeIn" data-wow-delay="0.1s">
-                    <form id="contact" name="contact" method="post">
+                    <%= simple_form_for @contact_form, input_html: { class: 'contact' } do |f| %>
                         <div class="form-group"> <span>Nome completo</span>
-                            <input type="text" name="name" id="name" required>
+                            <%= f.input :name, label: false %>
                         </div>
-                        <!-- end form-group -->
+
                         <div class="form-group"> <span>Seu e-mail</span>
-                            <input type="text" name="email" id="email" required>
+                            <%= f.input :email, label: false %>
                         </div>
-                        <!-- end form-group -->
+
+
                         <div class="form-group"> <span>Assunto</span>
-                            <input type="text" name="subject" id="subject" required>
+                            <%= f.input :subject, label: false %>
                         </div>
-                        <!-- end form-group -->
+
                         <div class="form-group"> <span>Descrição da Mensagem</span>
-                            <textarea name="message" id="message" required></textarea>
+                            <%= f.input :description, label: false %>
                         </div>
-                        <!-- end form-group -->
+
                         <div class="form-group">
                             <button id="submit" type="submit" name="submit">ENVIAR</button>
                         </div>
-                        <!-- end form-group -->
-                    </form>
-                    <!-- end form --> 
-                    <div class="form-group">
-                        <div id="success" class="alert alert-success" role="alert"> Your message was sent successfully! We will be in touch as soon as we can. </div>
-                        <!-- end success -->
-                        <div id="error" class="alert alert-danger" role="alert"> Something went wrong, try refreshing and submitting the form again. </div>
-                        <!-- end error --> 
-                    </div>
+                    <% end %>
+
+                    
                     <!-- end form-group -->
                 </div>
                 <!-- end col-6 -->

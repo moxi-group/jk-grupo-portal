@@ -25,7 +25,7 @@ class SiteController < ApplicationController
     end
 
     def contact
-        
+        @contact_form = ContactForm.new
     end
 
     
