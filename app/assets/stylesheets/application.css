@@ -57,3 +57,10 @@
     color: transparent;
     background-size: auto 100%;
 }
+
+.profile-board {
+    position: absolute;
+    right: 5%;
+    width: 40px;
+    top: 0;
+}

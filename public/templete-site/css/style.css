@@ -1841,7 +1841,7 @@ main {
   text-align: center;
   padding: 10vh 0;
   background: #fff;
-  box-shadow: 5px 20px 50px 5px rgba(153, 153, 153, 0.2);
+  box-shadow: 5px 20px 50px 5px #8b27c72e;
   -webkit-transition: 0.25s ease-in-out;
   -moz-transition: 0.25s ease-in-out;
   -ms-transition: 0.25s ease-in-out;
@@ -1866,7 +1866,7 @@ main {
 .services-content-block .content-box h4 {
   width: 100%;
   font-size: 28px;
-  font-weight: 800;
+  font-weight: 400;
   margin-bottom: 20px;
   background: url('/btn-bg.jpg') center;
   -webkit-background-clip: text;
