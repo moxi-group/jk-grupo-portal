@@ -44,3 +44,16 @@
 .nav-bg2 {
     background: url(/menu.png) center no-repeat !important;
 }
+
+.btn-fechar {
+    background-color: #fff;
+    padding: 0px 9px;
+    border-radius: 5px;
+}
+
+.assign-pca {
+    background: url(/btn-bg.jpg) center;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-size: auto 100%;
+}
