@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
-  resources :settings
-  resources :contact_forms
+
+    devise_for :users
+    resources :settings
+    resources :contact_forms
+    
     root 'site#index'
+
+    get '/dashboard',       to: 'dashboard#index',        as: :dashboard
 
     get '/about',           to: 'site#about',           as: 'about'
     get '/pca_message',     to: 'site#pca_message',     as: 'pca_message'
