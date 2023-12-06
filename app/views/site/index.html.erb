@@ -13,12 +13,11 @@
 
     </section>
 
-    <section class="services-content-block">
+    <section class="services-content-block" style="background: url('/banner.png') center no-repeat;">
         <div class="container">
             <div class="row">
                 <div class="col-md-4 wow fadeIn">
                     <div class="content-box content-box-board">
-                        <figure><img src="/images/site/icons/icon07.jpg" alt="Image"></figure>
                         <h4>Missão</h4>
                         <ul>
                             <li><%= setting.mission %></li>
@@ -30,7 +29,6 @@
                 
                 <div class="col-md-4 wow fadeIn" data-wow-delay="0.1s">
                     <div class="content-box content-box-board">
-                        <figure><img src="/images/site/icons/icon07.jpg" alt="Image"></figure>
                         <h4>Visão</h4>
                         <ul>
                             <li><%= setting.vision %></li>
@@ -42,7 +40,6 @@
                 
                 <div class="col-md-4 wow fadeIn" data-wow-delay="0.2s">
                     <div class="content-box content-box-board">
-                        <figure><img src="/images/site/icons/icon07.jpg" alt="Image"></figure>
                         <h4>Valores</h4>
                         <ul>
                             <li><%= setting.values %></li>
@@ -212,3 +209,13 @@
         <script src="/templete-site/js/fancybox.min.js"></script> 
         <script src="/templete-site/js/wow.min.js"></script> 
         <script src="/templete-site/js/scripts.js"></script>
+
+
+<style>
+
+.services-content-block .content-box{
+    border-radius: 50% !important;
+    padding: 40px !important;
+}
+
+</style>

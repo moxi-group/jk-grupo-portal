@@ -1,14 +1,20 @@
-<p style="color: green"><%= notice %></p>
+<!-- Hero -->
+<div class="bg-image overflow-hidden" style="background-image: url(<%= picture_home_path %>);">
+    <div class="bg-primary-dark-op">
+        <div class="content content-narrow content-full">
+            <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-center mt-5 mb-2 text-center text-sm-left">
+                <div class="flex-sm-fill">
+                    <h1 class="font-w600 text-white mb-0 invisible" data-toggle="appear">Menu De contactos</h1>
+                    <h2 class="h4 font-w400 text-white-75 mb-0 invisible" data-toggle="appear" data-timeout="250">Lista dos contactos</h2>
+                </div>
+                <div class="flex-sm-00-auto mt-3 mt-sm-0 ml-sm-3">
+                    <span class="d-inline-block invisible" data-toggle="appear" data-timeout="350">
 
-<h1>Contact forms</h1>
-
-<div id="contact_forms">
-  <% @contact_forms.each do |contact_form| %>
-    <%= render contact_form %>
-    <p>
-      <%= link_to "Show this contact form", contact_form %>
-    </p>
-  <% end %>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+<!-- END Hero -->
 
-<%= link_to "New contact form", new_contact_form_path %>
