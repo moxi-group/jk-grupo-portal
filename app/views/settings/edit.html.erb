@@ -1,10 +1,16 @@
-<h1>Editing setting</h1>
-
-<%= render "form", setting: @setting %>
-
-<br>
-
-<div>
-  <%= link_to "Show this setting", @setting %> |
-  <%= link_to "Back to settings", settings_path %>
+<!-- Hero -->
+<div class="bg-image overflow-hidden" style="background-image: url(<%= picture_home_path %>);">
+    <div class="bg-primary-dark-op">
+        <div class="content content-narrow content-full">
+            <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-center mt-5 mb-2 text-center text-sm-left">
+                <div class="flex-sm-fill">
+                    <h1 class="font-w600 text-white mb-0 invisible" data-toggle="appear">Actualizar Empresa</h1>
+                </div>
+                <div class="flex-sm-00-auto mt-3 mt-sm-0 ml-sm-3">
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
+<%= render 'form', setting: @setting, back_url: setting_path(@setting) %>

@@ -1,23 +1,39 @@
+<div class="content content-boxed">
+    <div class="block">
+        <div class="block-content">
+            <div class="row">
+                <div class="col-md-12">
+                    <%= simple_form_for(@setting) do |f| %>
+                        <%= f.error_notification %>
+                        <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
-<%= simple_form_for(@setting) do |f| %>
-  <%= f.error_notification %>
-  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <%= f.input :name, label: 'Nome da empresa' %>
+                                <%= f.input :email, label: 'E-mail' %>
+                                <%= f.input :cell_phone1, label: 'Número de telefone 1' %>
+                                <%= f.input :cell_phone2, label: 'Número de telefone 2' %>
+                                <%= f.input :about_us, label: 'Sobre nós' %>
+                            </div>
 
-  <div class="form-inputs">
-    <%= f.input :name %>
-    <%= f.input :street %>
-    <%= f.input :address %>
-    <%= f.input :cell_phone1 %>
-    <%= f.input :cell_phone2 %>
-    <%= f.input :email %>
-    <%= f.input :mission %>
-    <%= f.input :vision %>
-    <%= f.input :values %>
-    <%= f.input :about_us %>
-    <%= f.input :slug %>
-  </div>
+                            <div class="col-md-6">
+                                <%= f.input :street, label: 'Rua' %>
+                                <%= f.input :address, label: 'Endereço' %>
+                                <%= f.input :mission, label: 'Nossa Missão' %>
+                                <%= f.input :vision, label: 'Nossa Visão' %>
+                                <%= f.input :values, label: 'Nossos Valores' %>
+                            </div>
+                        </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
-<% end %>
+                        <hr />
+
+                        <div class="form-actions text-right">
+                            <%= f.button :submit, "#{@setting.id.present? ? 'Actualizar' : 'Registar'}", class: "btn btn-success btn-sm" %>
+                            <%= link_to 'Cancelar', back_url, class: 'btn btn-sm btn-danger' %>
+                        </div>
+                    <% end %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,10 +1,45 @@
-<p style="color: green"><%= notice %></p>
+<!-- Hero -->
+<div class="bg-image overflow-hidden" style="background-image: url(<%= picture_home_path %>);">
+    <div class="bg-primary-dark-op">
+        <div class="content content-narrow content-full">
+            <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-center mt-5 mb-2 text-center text-sm-left">
+                <div class="flex-sm-fill">
+                    <h1 class="font-w600 text-white mb-0 invisible" data-toggle="appear"><%= @setting.name %></h1>
+                </div>
+                <div class="flex-sm-00-auto mt-3 mt-sm-0 ml-sm-3">
+                    <span class="d-inline-block invisible" data-toggle="appear" data-timeout="350">
+                        <%= link_to edit_setting_path(@setting), class: "btn btn-sm btn-success" do  %>
+                            <i class="fa fa-edit mr-1"></i> Atualizar
+                        <% end %>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END Hero -->
 
-<%= render @setting %>
+<div class="content mb-3">
+    <div class="block mb-3">
+        <div class="block-content">
+            <div class="row">
+                <div class="col-md-6">
+                    <p><span class="font-w600 mb-2">Nome da Empresa: </span><span class="font-size-sm"><%= @setting.name %></span></p>
+                    <p><span class="font-w600 mb-2">E-mail: </span><span class="font-size-sm"><%= @setting.email %></span></p>
+                    <p><span class="font-w600 mb-2">Contacto 1: </span><span class="font-size-sm"><%= @setting.cell_phone1 %></span></p>
+                    <p><span class="font-w600 mb-2">Contacto 2: </span><span class="font-size-sm"><%= @setting.cell_phone2 %></span></p>
+                    <p><span class="font-w600 mb-2">Endereço: </span><span class="font-size-sm"><%= @setting.address %></span></p>
+                    <p><span class="font-w600 mb-2">Rua: </span><span class="font-size-sm"><%= @setting.street %></span></p>                
+                </div>
 
-<div>
-  <%= link_to "Edit this setting", edit_setting_path(@setting) %> |
-  <%= link_to "Back to settings", settings_path %>
-
-  <%= button_to "Destroy this setting", @setting, method: :delete %>
+                <div class="col-md-6">
+                    <p><span class="font-w600 mb-2">Missão: </span><span class="font-size-sm"><%= @setting.mission %></span></p>
+                    <p><span class="font-w600 mb-2">Visão: </span><span class="font-size-sm"><%= @setting.vision %></span></p>
+                    <p><span class="font-w600 mb-2">Valores: </span><span class="font-size-sm"><%= @setting.values %></span></p>
+                    <p><span class="font-w600 mb-2">Sobre nós: </span><span class="font-size-sm"><%= @setting.about_us %></span></p>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
 </div>
