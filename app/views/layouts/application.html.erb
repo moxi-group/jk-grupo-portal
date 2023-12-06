@@ -9,17 +9,30 @@
         <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
         <%= javascript_importmap_tags %>
 
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400italic,600,700%7COpen+Sans:300,400,400italic,600,700">
+        <link rel="stylesheet" id="css-main" href="/templete/assets/css/oneui.min.css">
+
 
     </head>
 
     <body>
 
         <% if user_signed_in? %>
-            <%= yield %>
+            <div id="page-container" class="sidebar-o sidebar-dark enable-page-overlay side-scroll page-header-fixed">
+                <%= render 'layouts/partials/manager/aside' %>
+                <%= render 'layouts/partials/manager/sidbar' %>
+                <%= render 'layouts/partials/manager/header' %>
+
+                <main id="main-container">
+                    <%= yield %>
+                </main>
+            </div>
         <% else %>
             <%= yield %>
         <% end %>
 
+        <script src="/templete/assets/js/oneui.core.min.js"></script>
+        <script src="/templete/assets/js/oneui.app.min.js"></script>
 
     </body>
 </html>

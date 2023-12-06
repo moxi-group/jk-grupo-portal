@@ -1,0 +1,36 @@
+<nav id="sidebar" aria-label="Main Navigation">
+    <div class="content-header bg-white-5 def-kamba-bg" style="padding: 60px; background-color: #fff!important;">
+        <a class="font-w600 text-dual" href="/">
+            <span class="smini-hide"><img src="/logo.png" alt="" width="100"></span>
+        </a>
+
+        <div>
+            <a class="d-lg-none text-dual ml-3" data-toggle="layout" data-action="sidebar_close" href="javascript:void(0)">
+                <i class="fa fa-times"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="content-side content-side-full">
+        <ul class="nav-main">
+            <li class="nav-main-item">
+                <a class="nav-main-link active" href="/">
+                    <i class="nav-main-link-icon si si-speedometer"></i>
+                    <span class="nav-main-link-name">Dashboard</span>
+                </a>
+            </li>
+
+            <% if current_user.present? %>
+                <%= render 'layouts/partials/manager/menu_admin'  %>
+
+                <li class="nav-main-item item-remove-role" style="width: 100%;">
+                    <a class="nav-main-link nav-main-link btn btn-danger text-white" href="<%= destroy_user_session_path %>">
+                        <i class="nav-main-link-icon si si-user"></i>
+                        <span class="nav-main-link-name">Terminar sessão</span>
+                    </a>
+                </li>
+            <% end %>
+
+        </ul>
+    </div>
+</nav>
