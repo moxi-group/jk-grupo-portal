@@ -68,3 +68,17 @@
 .profile-board {
     border-radius: 50%;
 }
+
+.navbar .sandwich-nav .sandwich-text b {
+    color: #ffffff !important;
+}
+
+.sandwich-btn span {
+    color: #ffffff !important;
+}
+
+.navbar .sandwich-nav {
+    background: #242562;
+    border-radius: 10px;
+    padding: 0px 5px;
+}
