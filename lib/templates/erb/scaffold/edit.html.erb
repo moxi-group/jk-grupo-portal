@@ -1,0 +1,16 @@
+<!-- Hero -->
+<div class="bg-image overflow-hidden" style="background-image: url(<%%= picture_home_path %>);">
+    <div class="bg-primary-dark-op">
+        <div class="content content-narrow content-full">
+            <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-center mt-5 mb-2 text-center text-sm-left">
+                <div class="flex-sm-fill">
+                    <h1 class="font-w600 text-white mb-0 invisible" data-toggle="appear">Actualizar</h1>
+                </div>
+                <div class="flex-sm-00-auto mt-3 mt-sm-0 ml-sm-3">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%%= render 'form', <%= singular_table_name %>: @<%= singular_table_name %>, back_url: <%= singular_table_name %>_path(@<%= singular_table_name %>) %>

@@ -1,0 +1,42 @@
+
+<div class="content content-boxed">
+    <div class="block">
+        <div class="block-content">
+            <div class="row">
+                <div class="col-md-12">
+                    <%= simple_form_for(@member) do |f| %>
+                        <%= f.error_notification %>
+                        <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                    <%= f.input :company_name, label: '' %>
+                                    <%= f.input :company_nif, label: '' %>
+                                    <%= f.input :company_address, label: '' %>
+                                    <%= f.input :company_cell_phone, label: '' %>
+                                    <%= f.input :company_email, label: '' %>
+                                    <%= f.input :company_area, label: '' %>
+                                    <%= f.input :company_logo, label: '' %>
+                                    <%= f.association :pack, label: '' %>
+                                    <%= f.input :name, label: '' %>
+                                    <%= f.input :email, label: '' %>
+                                    <%= f.input :cell_phone, label: '' %>
+                                    <%= f.input :status, label: '' %>
+                            </div>
+                            <div class="col-md-6">
+
+                            </div>
+                        </div>
+
+                        <hr />
+
+                        <div class="form-actions text-right">
+                            <%= f.button :submit, "#{@member.id.present? ? 'Actualizar' : 'Registar'}", class: "btn btn-success btn-sm" %>
+                            <%= link_to 'Cancelar', back_url, class: 'btn btn-sm btn-danger' %>
+                        </div>
+                    <% end %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

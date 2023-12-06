@@ -1,6 +1,7 @@
 class User < ApplicationRecord
     extend FriendlyId
     friendly_id :name, use: :slugged
+    
     devise :trackable, :database_authenticatable, :recoverable, :rememberable, :validatable, :authentication_keys => [:login]
 
     def login

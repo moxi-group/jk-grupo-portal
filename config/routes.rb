@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+    resources :members
+    resources :packs
+    resources :boards
 
     devise_for :users
     resources :settings
@@ -12,7 +15,7 @@ Rails.application.routes.draw do
     get '/pca_message',     to: 'site#pca_message',     as: 'pca_message'
     get '/board_directors', to: 'site#board_directors', as: 'board_directors'
     get '/products',        to: 'site#products',        as: 'products'
-    get '/members',         to: 'site#members',         as: 'members'
+    get '/all/members',     to: 'site#members',         as: 'all_members'
     get '/contact',         to: 'site#contact',         as: 'contact'
 
     # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

@@ -1,0 +1,72 @@
+<!-- Hero -->
+<div class="bg-image overflow-hidden" style="background-image: url(<%%= picture_home_path %>);">
+    <div class="bg-primary-dark-op">
+        <div class="content content-narrow content-full">
+            <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-center mt-5 mb-2 text-center text-sm-left">
+                <div class="flex-sm-fill">
+                    <h1 class="font-w600 text-white mb-0 invisible" data-toggle="appear">Menu <%= index_helper %></h1>
+                    <h2 class="h4 font-w400 text-white-75 mb-0 invisible" data-toggle="appear" data-timeout="250">Lista das <%= index_helper %></h2>
+                </div>
+                <div class="flex-sm-00-auto mt-3 mt-sm-0 ml-sm-3">
+                    <span class="d-inline-block invisible" data-toggle="appear" data-timeout="350">
+                        <%%= link_to new_<%= singular_table_name %>_path, class: "btn btn-sm btn-kambandu" do  %>
+                            <i class="fa fa-plus mr-1"></i> Nova <%= singular_table_name %>
+                        <%% end %>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END Hero -->
+
+
+<div class="content">
+    <div class="block">
+        <div class="block-header">
+            <div class="block-options">
+                <button type="button" class="btn-block-option">
+                    <i class="si si-settings"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="block-content">
+            <div class="table-responsive">
+
+                <table class="table table-bordered table-striped table-vcenter">
+                    <thead>
+                        <tr>
+                            <% attributes.reject(&:password_digest?).each do |attribute| -%>
+                    <th><%= attribute.human_name %></th>
+                            <% end %>
+                            <th colspan="2">Opções</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <%% @<%= plural_table_name %>.each do |<%= singular_table_name %>| %>
+                            <tr class="group border-t border-gray-400 hover:bg-gray-100">
+                                <% attributes.reject(&:password_digest?).each do |attribute| -%>
+                                    <td><%%= <%= singular_table_name %>.<%= attribute.column_name %> %></td>
+                                <% end %>
+                                <td class="text-right">
+                                    <%%= link_to <%= singular_table_name %>, class: "btn btn-sm btn-kambandu js-tooltip-enabled", "data-toggle": "tooltip", "title": "Ver detalhes", "data-original-title": "Ver detalhes" do %>
+                                        <i class="fa fa-fw fa-eye"></i>
+                                    <%% end %>
+                                    <%%= link_to edit_<%= singular_table_name %>_path(<%= singular_table_name %>), class: "btn btn-sm btn-success js-tooltip-enabled", "data-toggle": "tooltip", "title": "Actualizar", "data-original-title": "Actualizar" do %>
+                                        <i class="fa fa-fw fa-edit"></i>
+                                    <%% end %>
+                                </td>
+                            </tr>
+                        <%% end %>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<br>

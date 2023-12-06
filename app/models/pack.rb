@@ -1,4 +1,4 @@
-class Setting < ApplicationRecord
+class Pack < ApplicationRecord
     extend FriendlyId
     friendly_id :id, use: :slugged
     

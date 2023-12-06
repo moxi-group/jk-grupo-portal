@@ -10,9 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_12_06_084947) do
+ActiveRecord::Schema[7.0].define(version: 2023_12_06_123941) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "boards", force: :cascade do |t|
+    t.string "name"
+    t.string "picture"
+    t.string "position"
+    t.integer "order", default: 1, null: false
+    t.boolean "status", default: true, null: false
+    t.string "slug"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "contact_forms", force: :cascade do |t|
     t.string "name"
@@ -33,6 +44,34 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_06_084947) do
     t.index ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true
     t.index ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
     t.index ["sluggable_type", "sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_type_and_sluggable_id"
+  end
+
+  create_table "members", force: :cascade do |t|
+    t.string "company_name"
+    t.string "company_nif"
+    t.string "company_address"
+    t.string "company_cell_phone"
+    t.string "company_email"
+    t.string "company_area"
+    t.string "company_logo"
+    t.bigint "pack_id", null: false
+    t.string "name"
+    t.string "email"
+    t.string "cell_phone"
+    t.boolean "status", default: true, null: false
+    t.string "slug"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["pack_id"], name: "index_members_on_pack_id"
+  end
+
+  create_table "packs", force: :cascade do |t|
+    t.string "name"
+    t.decimal "price", default: "0.0", null: false
+    t.text "description"
+    t.string "slug"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "services", force: :cascade do |t|
@@ -88,4 +127,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_06_084947) do
     t.index ["unlock_token"], name: "index_users_on_unlock_token", unique: true
   end
 
+  add_foreign_key "members", "packs"
 end
