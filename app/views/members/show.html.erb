@@ -4,8 +4,8 @@
         <div class="content content-narrow content-full">
             <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-center mt-5 mb-2 text-center text-sm-left">
                 <div class="flex-sm-fill">
-                    <h1 class="font-w600 text-white mb-0 invisible" data-toggle="appear"><%= @member %></h1>
-                    <h2 class="h4 font-w400 text-white-75 mb-0 invisible" data-toggle="appear" data-timeout="250"> <%= link_to 'Todos', all_members_path, class: 'text-white' %> </h2>
+                    <h1 class="font-w600 text-white mb-0 invisible" data-toggle="appear"><%= @member.company_name %></h1>
+                    <h2 class="h4 font-w400 text-white-75 mb-0 invisible" data-toggle="appear" data-timeout="250"> <%= link_to 'Todos Membros', members_path, class: 'text-white' %> </h2>
                 </div>
                 <div class="flex-sm-00-auto mt-3 mt-sm-0 ml-sm-3">
                     <span class="d-inline-block invisible" data-toggle="appear" data-timeout="350">
@@ -26,19 +26,32 @@
         <div class="block-content">
             <div class="row">
                 <div class="col-md-5">
-                                        <p><span class="font-w600 mb-2">Company name: </span><span class="font-size-sm"><%= @member.company_name %></span></p>
-                                        <p><span class="font-w600 mb-2">Company nif: </span><span class="font-size-sm"><%= @member.company_nif %></span></p>
-                                        <p><span class="font-w600 mb-2">Company address: </span><span class="font-size-sm"><%= @member.company_address %></span></p>
-                                        <p><span class="font-w600 mb-2">Company cell phone: </span><span class="font-size-sm"><%= @member.company_cell_phone %></span></p>
-                                        <p><span class="font-w600 mb-2">Company email: </span><span class="font-size-sm"><%= @member.company_email %></span></p>
-                                        <p><span class="font-w600 mb-2">Company area: </span><span class="font-size-sm"><%= @member.company_area %></span></p>
-                                        <p><span class="font-w600 mb-2">Company logo: </span><span class="font-size-sm"><%= @member.company_logo %></span></p>
-                                        <p><span class="font-w600 mb-2">Pack: </span><span class="font-size-sm"><%= @member.pack %></span></p>
-                                        <p><span class="font-w600 mb-2">Name: </span><span class="font-size-sm"><%= @member.name %></span></p>
-                                        <p><span class="font-w600 mb-2">Email: </span><span class="font-size-sm"><%= @member.email %></span></p>
-                                        <p><span class="font-w600 mb-2">Cell phone: </span><span class="font-size-sm"><%= @member.cell_phone %></span></p>
-                                        <p><span class="font-w600 mb-2">Status: </span><span class="font-size-sm"><%= @member.status %></span></p>
-                                    </div>
+                    <h4>Informações da Empresa</h4>
+                    <p><span class="font-w600 mb-2">Nome da Empresa: </span><span class="font-size-sm"><%= @member.company_name %></span></p>
+                    <p><span class="font-w600 mb-2">NIF da Empresa: </span><span class="font-size-sm"><%= @member.company_nif %></span></p>
+                    <p><span class="font-w600 mb-2">Endereço: </span><span class="font-size-sm"><%= @member.company_address %></span></p>
+                    <p><span class="font-w600 mb-2">Nº Telefone: </span><span class="font-size-sm"><%= @member.company_cell_phone %></span></p>
+                    <p><span class="font-w600 mb-2">E-mail: </span><span class="font-size-sm"><%= @member.company_email %></span></p>
+                    <p><span class="font-w600 mb-2">Área de Ocupação: </span><span class="font-size-sm"><%= @member.company_area %></span></p>
+                    <p><span class="font-w600 mb-2">Pacote Associado: </span><span class="font-size-sm"><%= @member.pack.name %></span></p>
+                    <p><span class="font-w600 mb-2">Valor do Pacote: </span><span class="font-size-sm"><%= @member.pack.price.to_kwanza %></span></p>
+                </div>
+
+                <div class="col-md-7">
+                    <h4>Informações do representante</h4>
+                    <p><span class="font-w600 mb-2">Nome: </span><span class="font-size-sm"><%= @member.name %></span></p>
+                    <p><span class="font-w600 mb-2">E-mail: </span><span class="font-size-sm"><%= @member.email %></span></p>
+                    <p><span class="font-w600 mb-2">Nº Telefone: </span><span class="font-size-sm"><%= @member.cell_phone %></span></p>
+                    <p>
+                        <span class="font-w600 mb-2">Estado: </span> 
+                        <% if @member.status %>
+                            <span class="badge badge-success">Activa</span>
+                        <% else %>
+                            <span class="badge badge-danger">Inactiva</span>
+                        <% end %> 
+                    </p>
+                    <p><span class="font-w600 mb-2">descrição: </span><span class="font-size-sm"><%= @member.description %></span></p>
+                </div>
             </div>
             <br>
         </div>

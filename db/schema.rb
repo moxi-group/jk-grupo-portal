@@ -97,6 +97,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_06_132326) do
     t.string "email"
     t.string "cell_phone"
     t.boolean "status", default: true, null: false
+    t.text "description"
     t.string "slug"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

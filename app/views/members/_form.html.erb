@@ -10,21 +10,27 @@
 
                         <div class="row">
                             <div class="col-md-6">
-                                    <%= f.input :company_name, label: '' %>
-                                    <%= f.input :company_nif, label: '' %>
-                                    <%= f.input :company_address, label: '' %>
-                                    <%= f.input :company_cell_phone, label: '' %>
-                                    <%= f.input :company_email, label: '' %>
-                                    <%= f.input :company_area, label: '' %>
-                                    <%= f.input :company_logo, label: '' %>
-                                    <%= f.association :pack, label: '' %>
-                                    <%= f.input :name, label: '' %>
-                                    <%= f.input :email, label: '' %>
-                                    <%= f.input :cell_phone, label: '' %>
-                                    <%= f.input :status, label: '' %>
+                                    <h4>Informações da Empresa</h4>
+                                    <%= f.input :company_name, label: 'Nome da empresa' %>
+                                    <%= f.input :company_nif, label: 'NIF' %>
+                                    <%= f.input :company_address, label: 'Endereço' %>
+                                    <%= f.input :company_cell_phone, label: 'Nº telefone' %>
+                                    <%= f.input :company_email, label: 'E-mail' %>
+                                    <%= f.input :company_area, label: 'Área associada' %>
+                                    <%= f.association :pack, label: 'Selecionar o Pacote' %>
+                                    <hr>
+                                    <%= f.input :status, label: 'Marca para Activar' %>
                             </div>
                             <div class="col-md-6">
-
+                                    <h4>Informações do representante</h4>
+                                    <%= f.input :name, label: 'Nome do representate' %>
+                                    <%= f.input :email, label: 'E-mail do representate' %>
+                                    <%= f.input :cell_phone, label: 'Nº telefone' %>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <%= f.rich_text_area :description, label: 'Descrição' %>
                             </div>
                         </div>
 

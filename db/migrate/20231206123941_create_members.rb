@@ -13,6 +13,7 @@ class CreateMembers < ActiveRecord::Migration[7.0]
       t.string :email
       t.string :cell_phone
       t.boolean :status, null: false, default: true
+      t.text :description
       t.string :slug
 
       t.timestamps
