@@ -9,33 +9,17 @@
         <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
         <%= javascript_importmap_tags %>
 
-            <!-- CSS FILES -->
-        <link rel="stylesheet" href="/templete-site/css/font-awesome.min.css">
-        <link rel="stylesheet" href="/templete-site/css/animate.min.css">
-        <link rel="stylesheet" href="/templete-site/css/fancybox.min.css">
-        <link rel="stylesheet" href="/templete-site/css/odometer.min.css">
-        <link rel="stylesheet" href="/templete-site/css/swiper.min.css">
-        <link rel="stylesheet" href="/templete-site/css/bootstrap.min.css">
-        <link rel="stylesheet" href="/templete-site/css/style.css">
 
     </head>
 
     <body>
-        <%= yield %>
 
-        <script src="/templete-site/js/jquery.min.js"></script>
-        <script src="/templete-site/js/bootstrap.min.js"></script> 
-        <script src="/templete-site/js/swiper.min.js"></script> 
-        <script src="/templete-site/js/jquery.stellar.js"></script> 
-        <script src="/templete-site/js/isotope.min.js"></script> 
-        <script src="/templete-site/js/imagesloaded.pkgd.min.js"></script> 
-        <script src="/templete-site/js/jquery.typewriter.js"></script> 
-        <script src="/templete-site/js/odometer.min.js"></script> 
-        <script src="/templete-site/js/fancybox.min.js"></script> 
-        <script src="/templete-site/js/wow.min.js"></script> 
-        <script src="/templete-site/js/jquery.form.min.js"></script> 
-        <script src="/templete-site/js/jquery.validate.min.js"></script> 
-        <script src="/templete-site/js/contact.form.min.js"></script> 
+        <% if user_signed_in? %>
+            <%= yield %>
+        <% else %>
+            <%= yield %>
+        <% end %>
+
 
     </body>
 </html>
