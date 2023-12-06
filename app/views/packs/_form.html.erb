@@ -10,12 +10,18 @@
 
                         <div class="row">
                             <div class="col-md-6">
-                                    <%= f.input :name, label: '' %>
-                                    <%= f.input :price, label: '' %>
-                                    <%= f.input :description, label: '' %>
+                                    <%= f.input :name, label: 'Nome do pacote' %>
+                                    <%= f.input :price, label: 'preço' %>
                             </div>
                             <div class="col-md-6">
 
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <%= f.rich_text_area :description, label: 'Descrição' %>
                             </div>
                         </div>
 
