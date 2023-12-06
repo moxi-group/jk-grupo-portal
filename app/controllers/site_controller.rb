@@ -1,8 +1,12 @@
 class SiteController < ActionController::Base
+    before_action :set_member, only: %i[ 
+        member_details
+     ]
+
     layout 'site'
 
     def index
-        
+        @members = Member.all
     end
 
     def about
@@ -28,8 +32,16 @@ class SiteController < ActionController::Base
         @contact_form = ContactForm.new
     end
 
-    
 
+    def member_details
+        
+    end
+    
+    private
+    # Use callbacks to share common setup or constraints between actions.
+        def set_member
+            @member = Member.friendly.find(params[:id])
+        end
 
 
 

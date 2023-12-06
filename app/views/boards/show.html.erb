@@ -4,8 +4,8 @@
         <div class="content content-narrow content-full">
             <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-center mt-5 mb-2 text-center text-sm-left">
                 <div class="flex-sm-fill">
-                    <h1 class="font-w600 text-white mb-0 invisible" data-toggle="appear"><%= @board %></h1>
-                    <h2 class="h4 font-w400 text-white-75 mb-0 invisible" data-toggle="appear" data-timeout="250"> <%= link_to 'Todos', boards_path, class: 'text-white' %> </h2>
+                    <h1 class="font-w600 text-white mb-0 invisible" data-toggle="appear"><%= @board.name %></h1>
+                    <h2 class="h4 font-w400 text-white-75 mb-0 invisible" data-toggle="appear" data-timeout="250"> <%= link_to 'Todos Conselheiros', boards_path, class: 'text-white' %> </h2>
                 </div>
                 <div class="flex-sm-00-auto mt-3 mt-sm-0 ml-sm-3">
                     <span class="d-inline-block invisible" data-toggle="appear" data-timeout="350">
@@ -26,12 +26,18 @@
         <div class="block-content">
             <div class="row">
                 <div class="col-md-5">
-                                        <p><span class="font-w600 mb-2">Name: </span><span class="font-size-sm"><%= @board.name %></span></p>
-                                        <p><span class="font-w600 mb-2">Picture: </span><span class="font-size-sm"><%= @board.picture %></span></p>
-                                        <p><span class="font-w600 mb-2">Position: </span><span class="font-size-sm"><%= @board.position %></span></p>
-                                        <p><span class="font-w600 mb-2">Order: </span><span class="font-size-sm"><%= @board.order %></span></p>
-                                        <p><span class="font-w600 mb-2">Status: </span><span class="font-size-sm"><%= @board.status %></span></p>
-                                    </div>
+                    <p><span class="font-w600 mb-2">Nome do Conselheiro: </span><span class="font-size-sm"><%= @board.name %></span></p>
+                    <p><span class="font-w600 mb-2">Posição: </span><span class="font-size-sm"><%= @board.position %></span></p>
+                    <p><span class="font-w600 mb-2">Ordem: </span><span class="font-size-sm"><%= @board.order %></span></p>
+                    <p>
+                        <span class="font-w600 mb-2">Estado: </span> 
+                        <% if @board.status %>
+                            <span class="badge badge-success">Activa</span>
+                        <% else %>
+                            <span class="badge badge-danger">Inactiva</span>
+                        <% end %> 
+                    </p>
+                </div>
             </div>
             <br>
         </div>

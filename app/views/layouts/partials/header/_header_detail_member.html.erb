@@ -1,0 +1,79 @@
+<!-- end preloader -->
+<div class="navigation-menu">
+    <div class="nav-bg"></div>
+    <!-- end nav-bg -->
+    <div class="nav-bg2"></div>
+    <!-- end nav-bg2 -->
+    <div class="inner">
+        <ul>
+            <li><a href="<%= root_path %>">INÍCIO</a></li>
+            <li><a href="<%= about_path %>">QUEM SOMOS</a></li>
+            <li><a href="<%= pca_message_path %>">MENSAGEM do PCA</a></li>
+            <li><a href="<%= board_directors_path %>">CONSELHO de ADMINISTRAÇÃO</a></li>
+            <li><a href="<%= products_path %>">PRODUTOS</a></li>
+            <li><a href="<%= all_members_path %>">MEMBROS</a></li>
+            <li><a href="<%= contact_path %>">CONTACTO</a></li>
+        </ul>
+    </div>
+    <!-- end inner -->
+</div>
+<!-- end navigation-menu -->
+<div class="transition-overlay">
+    <div class="layer"></div>
+    <!-- end layer -->
+</div>
+<!-- end transition-overlay -->
+<nav class="navbar">
+    <div class="logo"> <a href="<%= root_path %>"><img src="/logo2.png" alt="Image"></a> </div>
+    <!-- end logo -->
+    <div class="sandwich-nav">
+        <div class="sandwich-text"><b>MENU<br>
+            FECHAR</b> 
+        </div>
+        <!-- end sandwich-text -->
+        <div class="sandwich-btn" id="sandwich-btn"> <span></span> <span></span> </div>
+        <!-- end sandwich-btn -->
+    </div>
+    <!-- end sandwich-nav -->
+</nav>
+
+<!-- end navbar -->
+<header class="page-header" style="background: url(/images/site/help.png) center; background-size: cover; height: 80%;">
+    <aside class="soundbar">
+        <div class="sound">
+            <div class="sound-title"> SOUND </div>
+            <!-- end sound-title -->
+            <div class="equalizer">
+                <div class="holder"> <span></span> <span></span> <span></span> <span></span><span></span><span></span> </div>
+                <!-- end holder --> 
+            </div>
+            <!-- end equalizer -->
+            <div class="sound-text"> <b>OFF<br>
+                ON</b> 
+            </div>
+            <!-- end sound-text --> 
+        </div>
+        <!-- end sound --> 
+    </aside>
+    <!-- end soundbar -->
+    <ul class="social-media">
+        <li><a href="https://web.facebook.com/profile.php?id=61550645407414" target="_blank"><%= image_tag '/images/networks/facebook.png', width: '30' %></a></li>
+        <li><a href="https://www.instagram.com/grupo_jk_comercial/" target="_blank"><%= image_tag '/images/networks/instagram.png', width: '30' %></a></li>
+        <li><a href="https://www.linkedin.com/in/grupo-jk-01002629b/" target="_blank"><%= image_tag '/images/networks/linkedin.png', width: '30' %></a></li>
+        <li><a href="https://www.youtube.com/channel/UCEgImum8SuwxmOC_d1_qJ9Q" target="_blank"><%= image_tag '/images/networks/youtube.png', width: '30' %></a></li>
+        <li><a href="#" target="_blank"><%= image_tag '/images/networks/twitter.png', width: '30' %></a></li>
+        <li><a href="#" target="_blank"><%= image_tag '/images/networks/tiktok.png', width: '30' %></a></li>
+    </ul>
+    <div class="inner-content">
+        <div class="inner">
+            <div class="container">
+                <h2><%= member.company_name %></h2>
+                <h6><%= link_to 'Voltar', root_url, class: 'text-white' %></h6>
+            </div>
+            <!-- end container -->
+        </div>
+        <!-- end inner --> 
+    </div>
+    <!-- end inner-content --> 
+</header>
+<!-- end page-header -->

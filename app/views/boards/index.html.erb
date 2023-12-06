@@ -4,13 +4,13 @@
         <div class="content content-narrow content-full">
             <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-center mt-5 mb-2 text-center text-sm-left">
                 <div class="flex-sm-fill">
-                    <h1 class="font-w600 text-white mb-0 invisible" data-toggle="appear">Menu boards</h1>
-                    <h2 class="h4 font-w400 text-white-75 mb-0 invisible" data-toggle="appear" data-timeout="250">Lista das boards</h2>
+                    <h1 class="font-w600 text-white mb-0 invisible" data-toggle="appear">Menu Membros do Conselho</h1>
+                    <h2 class="h4 font-w400 text-white-75 mb-0 invisible" data-toggle="appear" data-timeout="250">Lista dos Conselheiros</h2>
                 </div>
                 <div class="flex-sm-00-auto mt-3 mt-sm-0 ml-sm-3">
                     <span class="d-inline-block invisible" data-toggle="appear" data-timeout="350">
                         <%= link_to new_board_path, class: "btn btn-sm btn-kambandu" do  %>
-                            <i class="fa fa-plus mr-1"></i> Nova board
+                            <i class="fa fa-plus mr-1"></i> Novo Conselheiro
                         <% end %>
                     </span>
                 </div>
@@ -37,12 +37,10 @@
                 <table class="table table-bordered table-striped table-vcenter">
                     <thead>
                         <tr>
-                                                <th>Name</th>
-                                                <th>Picture</th>
-                                                <th>Position</th>
-                                                <th>Order</th>
-                                                <th>Status</th>
-                            
+                            <th>Ordem</th>
+                            <th>Nome compelto</th>
+                            <th>Posição</th>
+                            <th>Estado</th>
                             <th colspan="2">Opções</th>
                         </tr>
                     </thead>
@@ -50,11 +48,16 @@
                     <tbody>
                         <% @boards.each do |board| %>
                             <tr class="group border-t border-gray-400 hover:bg-gray-100">
-                                                                    <td><%= board.name %></td>
-                                                                    <td><%= board.picture %></td>
-                                                                    <td><%= board.position %></td>
-                                                                    <td><%= board.order %></td>
-                                                                    <td><%= board.status %></td>
+                                <td><%= board.order %></td>
+                                <td><%= board.name %></td>
+                                <td><%= board.position %></td>
+                                <td>
+                                    <% if board.status %>
+                                        <span class="badge badge-success">Activa</span>
+                                    <% else %>
+                                        <span class="badge badge-danger">Inactiva</span>
+                                    <% end %> 
+                                </td>
                                 
                                 <td class="text-right">
                                     <%= link_to board, class: "btn btn-sm btn-kambandu js-tooltip-enabled", "data-toggle": "tooltip", "title": "Ver detalhes", "data-original-title": "Ver detalhes" do %>

@@ -1,4 +1,4 @@
-class ContactFormsController < ApplicationController
+class ContactFormsController < ActionController::Base
   before_action :set_contact_form, only: %i[ show edit update destroy ]
 
   # GET /contact_forms or /contact_forms.json

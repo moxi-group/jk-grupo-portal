@@ -96,19 +96,14 @@
             <br>
             <div class="container">
                 <div class="row justify-content-md-center">
-                    <div class="col-lg-2 text-center">
-                        <%= image_tag("membros/membro1.png", class: "img-reponsive", style: "height: 100px;") %>
-                        <h5 class="mt-2">Jeremias Services</h5>
-                    </div>
-                    <div class="col-lg-2 text-center">
-                        <%= image_tag("membros/membro2.png", class: "img-reponsive", style: "height: 100px;") %>
-                        <h5 class="mt-2">Kanguíto Clean</h5>
-                    </div>
-
-                    <div class="col-lg-2 text-center">
-                        <%= image_tag("membros/membro3.png", class: "img-reponsive", style: "height: 100px;") %>
-                        <h5 class="mt-2">Jeremias Services</h5>
-                    </div>
+                    <% @members.each do |member| %>
+                        <div class="col-lg-2 text-center">
+                            <%= link_to member_details_url(member) do %>
+                                <%= image_tag("#{member.company_logo}", class: "img-fluid img-thumbnail img-members") %>
+                            <% end %>
+                            <p class="mt-2"><%= member.company_name %></p>
+                        </div>
+                    <% end %> 
                 </div>
                 <!-- end row -->
             </div>
@@ -178,18 +173,11 @@
     <section class="clients">
         <div class="container wow fadeIn">
             <h2>PARCEIROS</h2>
-            <ul>
-                <li class="wow fadeIn" data-wow-delay="0s">
-                    <figure>
-                        <%= image_tag("parceiros/parceiro1.png", class: "") %>
-                    </figure>
-                </li>
-                <li class="wow fadeIn" data-wow-delay="0.1s">
-                    <figure>
-                        <%= image_tag("parceiros/parceiro2.png", class: "") %>
-                    </figure>
-                </li>
-            </ul>
+            <div class="row justify-content-md-center">
+                <div class="col-md-2 fadeIn" data-wow-delay="0s">
+                    <%= image_tag("parceiros/parceiro2.png", class: "img-fluid img-thumbnail") %>
+                </div>
+            </div>
         </div>
         <!-- end container -->
     </section>
@@ -216,6 +204,12 @@
 .services-content-block .content-box{
     border-radius: 50% !important;
     padding: 40px !important;
+}
+
+.img-members{
+    width: 100%;
+    aspect-ratio: 3/2;
+    object-fit: contain;
 }
 
 </style>
