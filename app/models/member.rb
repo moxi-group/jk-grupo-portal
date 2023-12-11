@@ -5,6 +5,7 @@ class Member < ApplicationRecord
   belongs_to :pack
 
   has_rich_text :description
+  has_one_attached :company_logo, dependent: :destroy
 
 
 end

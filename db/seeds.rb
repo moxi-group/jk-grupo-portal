@@ -13,3 +13,16 @@ User.create(
     password: 'q1w2e3r4',
     password_confirmation: 'q1w2e3r4',
 )
+
+ACCESS
+BGLJ991DH7UNJ3W19BO1
+
+SECRET
+08bh81mpVaK0Ns9oZy3wwWjL27JLRsJq3ZRAANFK
+
+
+
+
+# aws:
+#   access_key_id: 123
+#   secret_access_key: 345

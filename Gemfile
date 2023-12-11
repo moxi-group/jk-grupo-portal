@@ -79,3 +79,6 @@ gem 'capistrano-rbenv', '~> 2.1', '>= 2.1.4'
 gem 'friendly_id', '~> 5.4.0'
 gem 'simple_form'
 gem "devise", "~> 4.9"
+
+gem 'activestorage'
+gem "aws-sdk-s3", require: false

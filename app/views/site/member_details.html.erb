@@ -47,7 +47,9 @@
                 </div>
                 <!-- end col-6 -->
                 <div class="col-md-6 wow fadeIn" data-wow-delay="0.1s">
-                    <%= image_tag("#{@member.company_logo}", class: "img-fluid") %>
+                    <% if @member.company_logo.attached? %>
+                        <%= image_tag(@member.company_logo, class: "img-fluid") %>                                  
+                    <% end %>
                 </div>
 
                 <!-- end col-12 -->
