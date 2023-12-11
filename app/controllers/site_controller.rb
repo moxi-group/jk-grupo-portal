@@ -3,6 +3,11 @@ class SiteController < ActionController::Base
         member_details
      ]
 
+
+     before_action :set_product, only: %i[ 
+        product_detail
+     ]
+
     layout 'site'
 
     def index
@@ -22,6 +27,7 @@ class SiteController < ActionController::Base
     end
 
     def all_products
+        @products = Product.all
     end
 
     def product_detail
@@ -50,6 +56,8 @@ class SiteController < ActionController::Base
             @member = Member.friendly.find(params[:id])
         end
 
-
+        def set_product
+            @product = Product.friendly.find(params[:id])
+        end
 
 end
