@@ -25,37 +25,22 @@
         <div class="container wow fadeIn">
 
             <ul>
-                <li class="wow fadeIn" data-wow-delay="0s">
-                    <figure>
-                        <img src="/templete-site/images/logo01.png" alt="Image">
-                    </figure>
-                </li>
-                <li class="wow fadeIn" data-wow-delay="0.1s">
-                    <figure>
-                        <img src="/templete-site/images/logo02.png" alt="Image">
-                    </figure>
-                </li>
-                <li class="wow fadeIn" data-wow-delay="0.2s">
-                    <figure>
-                        <img src="/templete-site/images/logo03.png" alt="Image">
-                    </figure>
-                </li>
+                <% @members.each do |member| %>
+                    <li class="wow fadeIn" data-wow-delay="0s">
+                        <%= link_to member_details_url(member) do %>
+                            <% if member.company_logo.attached? %>
+                                <figure>
+                                    <%= image_tag(member.company_logo, class: "") %>                                  
+                                </figure>
+                            <% else %>
+                                <figure>
+                                    <img src="/templete-site/images/logo01.png" alt="Image">
+                                </figure>
+                            <% end %>
+                        <% end %>
+                    </li>
+                <% end %> 
 
-                <li class="wow fadeIn" data-wow-delay="0s">
-                    <figure>
-                        <img src="/templete-site/images/logo01.png" alt="Image">
-                    </figure>
-                </li>
-                <li class="wow fadeIn" data-wow-delay="0.1s">
-                    <figure>
-                        <img src="/templete-site/images/logo02.png" alt="Image">
-                    </figure>
-                </li>
-                <li class="wow fadeIn" data-wow-delay="0.2s">
-                    <figure>
-                        <img src="/templete-site/images/logo03.png" alt="Image">
-                    </figure>
-                </li>
 
             </ul>
         </div>

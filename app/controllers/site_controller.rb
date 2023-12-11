@@ -35,15 +35,16 @@ class SiteController < ActionController::Base
         
     end
 
-    
-
-
     def members
-        
+        @members = Member.all
     end
 
     def contact
         @contact_form = ContactForm.new
+    end
+
+    def want_member
+        @member = Member.new
     end
 
 

@@ -1,0 +1,83 @@
+
+<%= render 'layouts/partials/header/header_about', subject: 'Quero ser Membro' %>
+
+<main>
+    <section class="contact">
+        <div class="container">
+            <div class="content content-boxed">
+                <div class="block">
+                    <div class="block-content">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <%= simple_form_for(@member) do |f| %>
+                                    <%= f.error_notification %>
+                                    <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                                <h4>Informações da Empresa</h4>
+                                                <%= f.input :company_name, label: 'Nome da empresa' %>
+                                                <%= f.input :company_nif, label: 'NIF' %>
+                                                <%= f.input :company_address, label: 'Endereço' %>
+                                                <%= f.input :company_cell_phone, label: 'Nº telefone' %>
+                                                <%= f.input :company_email, label: 'E-mail' %>
+                                                <%= f.input :company_area, label: 'Área associada' %>
+                                        </div>
+                                        <div class="col-md-6">
+                                                <%= f.input :company_logo, label: 'Link do logotipo' %>
+                                                <%= f.association :pack, label: 'Selecionar o Pacote' %>
+
+                                                <hr>
+
+                                                <h4>Informações do representante</h4>
+                                                <%= f.input :name, label: 'Nome do representate' %>
+                                                <%= f.input :email, label: 'E-mail do representate' %>
+                                                <%= f.input :cell_phone, label: 'Nº telefone' %>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <%= f.rich_text_area :description, label: 'Descrição' %>
+                                        </div>
+                                    </div>
+
+                                    <hr />
+
+                                    <div class="form-actions text-right">
+                                        <%= f.button :submit, 'Enviar', class: "btn btn-success btn-sm" %>
+                                        <%= link_to 'Cancelar', root_url, class: 'btn btn-sm btn-danger' %>
+                                    </div>
+                                <% end %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end container --> 
+    </section>
+    <!-- end contact -->
+
+    <%= render 'layouts/partials/footer' %>
+    <!-- end sub-footer --> 
+</main>
+<!-- end main -->
+
+<!-- JS FILES --> 
+<script src="/templete-site/js/jquery.min.js"></script>
+<script src="/templete-site/js/bootstrap.min.js"></script> 
+<script src="/templete-site/js/swiper.min.js"></script> 
+<script src="/templete-site/js/jquery.stellar.js"></script> 
+<script src="/templete-site/js/isotope.min.js"></script> 
+<script src="/templete-site/js/imagesloaded.pkgd.min.js"></script> 
+<script src="/templete-site/js/jquery.typewriter.js"></script> 
+<script src="/templete-site/js/odometer.min.js"></script> 
+<script src="/templete-site/js/fancybox.min.js"></script> 
+<script src="/templete-site/js/wow.min.js"></script> 
+<script src="/templete-site/js/jquery.form.min.js"></script> 
+<script src="/templete-site/js/jquery.validate.min.js"></script> 
+<script src="/templete-site/js/contact.form.min.js"></script> 
+
+<script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDhhmmjFT2XUyAas1mLlz4xhXkTMUZOFnY&#038'></script> 
+<script src="/templete-site/js/googlemaps.min.js"></script> 
+<script src="/templete-site/js/scripts.js"></script>

@@ -12,8 +12,10 @@ Rails.application.routes.draw do
     root 'site#index'
 
     get '/dashboard',           to: 'dashboard#index',        as: :dashboard
-    get '/members/details/:id', to: 'site#member_details',        as: :member_details
+    get '/members/details/:id', to: 'site#member_details',    as: :member_details
+    get '/quero-ser-membro',    to: 'site#want_member',       as: :want_member
 
+    
     get '/about',           to: 'site#about',           as: 'about'
     get '/pca_message',     to: 'site#pca_message',     as: 'pca_message'
     get '/board_directors', to: 'site#board_directors', as: 'board_directors'
