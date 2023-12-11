@@ -110,3 +110,12 @@
     background: #242562 !important;
     color: #ffffff !important;
 }
+
+.bg-products {
+    background-image: url("/images/site/networking.png") !important;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    background-size: cover;
+    background-attachment: fixed;
+}

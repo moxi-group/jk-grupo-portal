@@ -176,9 +176,14 @@
         <div class="container wow fadeIn">
             <h2>PARCEIROS</h2>
             <div class="row justify-content-md-center">
-                <div class="col-md-2 fadeIn" data-wow-delay="0s">
-                    <%= image_tag("parceiros/parceiro2.png", class: "img-fluid img-thumbnail") %>
-                </div>
+                <% @partners.each do |partner| %>
+                    <div class="col-md-2 fadeIn" data-wow-delay="0s">
+                        <% if partner.picture.attached? %>
+                            <%= image_tag(partner.picture, class: "img-fluid img-members") %>                                  
+                        <% end %>
+                        <%= partner.name %>
+                    </div>
+                <% end %>
             </div>
         </div>
         <!-- end container -->
@@ -213,5 +218,7 @@
     aspect-ratio: 3/2;
     object-fit: contain;
 }
+
+
 
 </style>

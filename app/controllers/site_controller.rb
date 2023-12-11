@@ -11,6 +11,7 @@ class SiteController < ActionController::Base
     layout 'site'
 
     def index
+        @partners = Partner.all
         @members = Member.all
     end
 
