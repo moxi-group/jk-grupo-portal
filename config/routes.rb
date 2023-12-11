@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+    resources :products
     resources :members
     resources :packs
     resources :boards
@@ -15,7 +16,10 @@ Rails.application.routes.draw do
     get '/about',           to: 'site#about',           as: 'about'
     get '/pca_message',     to: 'site#pca_message',     as: 'pca_message'
     get '/board_directors', to: 'site#board_directors', as: 'board_directors'
-    get '/products',        to: 'site#products',        as: 'products'
+
+    get '/nossos-products', to: 'site#all_products',    as: 'all_products'
+    get '/nossos-products/details/:id', to: 'site#product_detail',    as: 'product_detail'
+
     get '/all/members',     to: 'site#members',         as: 'all_members'
     get '/contact',         to: 'site#contact',         as: 'contact'
 

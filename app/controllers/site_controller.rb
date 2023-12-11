@@ -21,8 +21,15 @@ class SiteController < ActionController::Base
 
     end
 
-    def products
+    def all_products
     end
+
+    def product_detail
+        
+    end
+
+    
+
 
     def members
         

@@ -1,0 +1,32 @@
+
+<div class="content content-boxed">
+    <div class="block">
+        <div class="block-content">
+            <div class="row">
+                <div class="col-md-12">
+                    <%= simple_form_for(@product) do |f| %>
+                        <%= f.error_notification %>
+                        <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <%= f.input :name, label: 'Nome do produto' %>
+                                <%= f.rich_text_area :description, label: 'Descrição' %>
+                            </div>
+                            <div class="col-md-6">
+
+                            </div>
+                        </div>
+
+                        <hr />
+
+                        <div class="form-actions text-right">
+                            <%= f.button :submit, "#{@product.id.present? ? 'Actualizar' : 'Registar'}", class: "btn btn-success btn-sm" %>
+                            <%= link_to 'Cancelar', back_url, class: 'btn btn-sm btn-danger' %>
+                        </div>
+                    <% end %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

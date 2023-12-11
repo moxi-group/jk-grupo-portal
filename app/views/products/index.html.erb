@@ -1,0 +1,70 @@
+<!-- Hero -->
+<div class="bg-image overflow-hidden" style="background-image: url(<%= picture_home_path %>);">
+    <div class="bg-primary-dark-op">
+        <div class="content content-narrow content-full">
+            <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-center mt-5 mb-2 text-center text-sm-left">
+                <div class="flex-sm-fill">
+                    <h1 class="font-w600 text-white mb-0 invisible" data-toggle="appear">Menu Produtos</h1>
+                    <h2 class="h4 font-w400 text-white-75 mb-0 invisible" data-toggle="appear" data-timeout="250">Lista dos Produtos</h2>
+                </div>
+                <div class="flex-sm-00-auto mt-3 mt-sm-0 ml-sm-3">
+                    <span class="d-inline-block invisible" data-toggle="appear" data-timeout="350">
+                        <%= link_to new_product_path, class: "btn btn-sm btn-kambandu" do  %>
+                            <i class="fa fa-plus mr-1"></i> Novo produto
+                        <% end %>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END Hero -->
+
+
+<div class="content">
+    <div class="block">
+        <div class="block-header">
+            <div class="block-options">
+                <button type="button" class="btn-block-option">
+                    <i class="si si-settings"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="block-content">
+            <div class="table-responsive">
+
+                <table class="table table-bordered table-striped table-vcenter">
+                    <thead>
+                        <tr>
+                            <th>Nome do produto</th>
+                            <th>Descrição</th>
+                            <th>Data de registo</th>
+                            <th colspan="2">Opções</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <% @products.each do |product| %>
+                            <tr class="group border-t border-gray-400 hover:bg-gray-100">
+                                <td><%= product.name %></td>
+                                <td><%= product.description %></td>
+                                <td><%= product.created_at %></td>
+                                
+                                <td class="text-right">
+                                    <%= link_to edit_product_path(product), class: "btn btn-sm btn-success js-tooltip-enabled", "data-toggle": "tooltip", "title": "Actualizar", "data-original-title": "Actualizar" do %>
+                                        <i class="fa fa-fw fa-edit"></i>
+                                    <% end %>
+                                </td>
+                            </tr>
+                        <% end %>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<br>
