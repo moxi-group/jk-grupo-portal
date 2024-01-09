@@ -2,6 +2,17 @@ include ActionView::Helpers::NumberHelper
 
 
 module ApplicationHelper
+
+    def meta_description
+        'GRUPO JK COMERCIAL, Grupo Jeremias e Kanguito, são um grupo de empreendedores focados em promover negócios e serviços inovadores em Angola, trabalhando com parceiros para encontrar soluções rápidas aos desafios do mercado local.'
+    end
+
+    def meta_keywords
+        "Grupo JK Comercial, Grupo JK Comercial Angola, Jeremias, Kanguito, empreendedores, negócios, serviços, inovadores, Angola"
+    end
+
+
+
     def setting
         Setting.first
     end

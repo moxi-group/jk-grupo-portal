@@ -119,3 +119,14 @@
     background-size: cover;
     background-attachment: fixed;
 }
+
+.form-member {
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    padding: 50px;
+}
+
+div.card-kamba-bg {
+    background: linear-gradient(90deg, rgba(66, 134, 77, 1) 0%, rgba(36, 37, 98, 1) 76%);
+    padding: 15px;
+    border-radius: 5px;
+}

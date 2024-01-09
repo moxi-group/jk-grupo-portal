@@ -131,15 +131,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_11_073404) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "services", force: :cascade do |t|
-    t.string "name"
-    t.string "img_link"
-    t.string "description"
-    t.string "slug"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "settings", force: :cascade do |t|
     t.string "name"
     t.string "street"
