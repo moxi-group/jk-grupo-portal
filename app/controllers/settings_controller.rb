@@ -65,6 +65,19 @@ class SettingsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def setting_params
-      params.require(:setting).permit(:name, :street, :address, :cell_phone1, :cell_phone2, :email, :mission, :vision, :values, :about_us, :slug)
+      params.require(:setting).permit(
+        :name, 
+        :street, 
+        :address, 
+        :cell_phone1, 
+        :cell_phone2, 
+        :email, 
+        :mission, 
+        :vision, 
+        :values, 
+        :about_us,
+        :agreements,
+        :slug
+      )
     end
 end

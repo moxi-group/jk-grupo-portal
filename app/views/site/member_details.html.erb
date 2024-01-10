@@ -47,6 +47,19 @@
                 </div>
                 <!-- end col-6 -->
                 <div class="col-md-6 wow fadeIn" data-wow-delay="0.1s">
+                    <% if @member.facebook_link.present? %>
+                        <a href="<%= @member.facebook_link %>" target="_blank"><%= image_tag '/images/networks/facebook.png', width: '50' %></a>
+                    <% end %>
+
+                    <% if @member.instagram_link.present? %>
+                        <a href="<%= @member.instagram_link %>" target="_blank"><%= image_tag '/images/networks/instagram.png', width: '50' %></a>
+                    <% end %>
+
+                    <% if @member.linkedin_link.present? %>
+                        <a href="<%= @member.linkedin_link %>" target="_blank"><%= image_tag '/images/networks/linkedin.png', width: '50' %></a>
+                    <% end %>
+
+
                     <% if @member.company_logo.attached? %>
                         <%= image_tag(@member.company_logo, class: "img-fluid") %>                                  
                     <% end %>

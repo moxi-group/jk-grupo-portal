@@ -140,25 +140,26 @@
             <div class="row">
                 <div class="col-lg-7 text-center">
                     <div class="row inner">
-                        <div class="col-4 wow fadeIn">
-                            <span class="odometer" id="1"></span><small>+</small>
+                        <div class="col-4 wow fadeIn estatistic-boader">
+                            <br>
+                            <br>
+                            <span class="color-estat" style="font-size: 20px;">Membros</span> <br>
+                            <span class="color-estat odometer"><%= Member.all.count %></span>
                         </div>
-                        <!-- end col-4 -->
-                        <div class="col-4 wow fadeIn" data-wow-delay="0.1s">
-                            <span class="odometer" id="2"></span><small>%</small>
+                        <div class="col-4 wow fadeIn estatistic-boader">
+                            <br>
+                            <br>
+                            <span class="color-estat" style="font-size: 20px;">Contratos</span> <br>
+                            <span class="color-estat odometer"><%= setting.agreements %></span>
                         </div>
-                        <!-- end col-4 -->
-                        <div class="col-4 wow fadeIn" data-wow-delay="0.2s">
-                            <span class="odometer" id="3"></span><small>k</small>
+
+                        <div class="col-4 wow fadeIn estatistic-boader">
+                            <br>
+                            <br>
+                            <span class="color-estat" style="font-size: 20px;">Serviços/Produtos</span> <br>
+                            <span class="color-estat odometer"><%= Product.all.count%></span>
                         </div>
-                        <!-- end col-4 -->
                     </div>
-                    <div class="row inner">
-                        <div class="col-md-12">
-                            <img src="/logo_black.png" alt="Image">
-                        </div>
-                    </div>
-                    <!-- end row inner -->
                 </div>
                 <!-- end col-7 -->
                 <div class="col-lg-5 text-right wow fadeIn" data-wow-delay="0.3s">
@@ -221,6 +222,17 @@
     object-fit: contain;
 }
 
+.estatistic-boader{
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    margin: 14px
+}
+
+.color-estat{
+    color: #568789;
+}
 
 
 </style>
