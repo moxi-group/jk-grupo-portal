@@ -20,7 +20,8 @@ Rails.application.routes.draw do
     get '/pca_message',     to: 'site#pca_message',     as: 'pca_message'
     get '/board_directors', to: 'site#board_directors', as: 'board_directors'
 
-    get '/nossos-products', to: 'site#all_products',    as: 'all_products'
+    get '/nossos-products', to: 'site#all_products',      as: 'all_products'
+    get '/produtos-globais', to: 'site#global_products',  as: 'global_products'
     get '/nossos-products/details/:id', to: 'site#product_detail',    as: 'product_detail'
 
     get '/all/members',     to: 'site#members',         as: 'all_members'

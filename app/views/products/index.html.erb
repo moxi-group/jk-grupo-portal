@@ -48,7 +48,7 @@
                         <% @products.each do |product| %>
                             <tr class="group border-t border-gray-400 hover:bg-gray-100">
                                 <td><%= product.name %></td>
-                                <td><%= product.description %></td>
+                                <td><%= truncate(strip_tags(product.description.to_s), length: 200) %></td>
                                 <td><%= product.created_at %></td>
                                 
                                 <td class="text-right">

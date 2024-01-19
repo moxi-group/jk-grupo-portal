@@ -154,10 +154,12 @@
                         </div>
 
                         <div class="col-4 wow fadeIn estatistic-boader">
-                            <br>
-                            <br>
-                            <span class="color-estat" style="font-size: 20px;">Serviços/Produtos</span> <br>
-                            <span class="color-estat odometer"><%= Product.all.count%></span>
+                            <%= link_to global_products_path do %>
+                                <br>
+                                <br>
+                                <span class="color-estat" style="font-size: 20px;">Produtos</span> <br>
+                                <span class="color-estat odometer"><%= Product.all.count%></span>
+                            <% end %>
                         </div>
                     </div>
                 </div>

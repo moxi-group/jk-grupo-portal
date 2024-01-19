@@ -28,11 +28,14 @@ class SiteController < ActionController::Base
     end
 
     def all_products
-        @products = Product.all
+        @products = Product.where(is_internal: true)
     end
 
     def product_detail
-        
+    end
+
+    def global_products
+        @products = Product.all
     end
 
     def members

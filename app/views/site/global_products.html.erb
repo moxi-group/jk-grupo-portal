@@ -1,0 +1,70 @@
+<%= render 'layouts/partials/header/header_about', subject: 'Nossos Produtos' %>
+
+<main class="bg-products">
+
+    <section class="works">
+        <div class="container">
+            <div class="">
+                <br>
+                <br>
+
+                <div class="row">
+                    <% @products.each do |product| %>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <% if product.picture.attached? %>
+                                    <%= image_tag(product.picture, class: "card-img-top") %>                                  
+                                <% else %>
+                                    <img src="/images/site/icons/icon07.jpg" class="card-img-top" alt="...">
+                                <% end %>
+
+                                <div class="card-body">
+                                    <h5 class="card-title"><%= product.name %></h5>
+                                    <p styele="font-size: 13px;line-height: 22px">
+                                        <%= truncate(strip_tags(product.description.to_s), length: 100) %>
+                                    </p>
+                                    <br>
+                                    <a href="<%= product_detail_path(product) %>" class="btn btn-success btn-sm">Ler mais</a>
+                                </div>
+                            </div>
+                        </div>
+                    <% end %>
+                    <!-- end col-4 -->
+
+                </div>
+
+                <br>
+                <br>
+            </div>
+        </div>
+    </section>
+
+
+    <%= render 'layouts/partials/footer' %>
+    <!-- end sub-footer --> 
+</main>
+<!-- end main -->
+
+<!-- JS FILES --> 
+<script src="/templete-site/js/jquery.min.js"></script>
+<script src="/templete-site/js/bootstrap.min.js"></script> 
+<script src="/templete-site/js/swiper.min.js"></script> 
+<script src="/templete-site/js/jquery.stellar.js"></script> 
+<script src="/templete-site/js/isotope.min.js"></script> 
+<script src="/templete-site/js/imagesloaded.pkgd.min.js"></script> 
+<script src="/templete-site/js/jquery.typewriter.js"></script> 
+<script src="/templete-site/js/odometer.min.js"></script> 
+<script src="/templete-site/js/fancybox.min.js"></script> 
+<script src="/templete-site/js/wow.min.js"></script> 
+<script src="/templete-site/js/jquery.form.min.js"></script> 
+<script src="/templete-site/js/jquery.validate.min.js"></script> 
+<script src="/templete-site/js/contact.form.min.js"></script> 
+
+<script src="/templete-site/js/scripts.js"></script>
+
+
+<styele>
+
+
+
+</styele>
