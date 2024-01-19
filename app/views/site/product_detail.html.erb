@@ -9,14 +9,28 @@
                     <div class="title">
                         <h3><%= @product.name %></h3>
                     </div>
-                    <!--end title --> 
                 </div>
+
+                <div class="row">
+                    <div class="col-md-8 wow fadeIn">
+                        <div class="title">
+                            <p><%= @product.description %></p>
+                        </div>
+                        <!--end title -->
+                    </div>
+
+                    <div class="col-md-4 wow fadeIn">
+                        <% if @product.picture.attached? %>
+                            <%= image_tag(@product.picture, class: "img-fluid") %>                                  
+                        <% end %>
+                    </div>
+
+                </div>
+
+
             </div>
-            <!-- end row --> 
         </div>
-        <!-- end container --> 
     </section>
-    <!-- end contact -->
 
     <%= render 'layouts/partials/footer' %>
     <!-- end sub-footer --> 
