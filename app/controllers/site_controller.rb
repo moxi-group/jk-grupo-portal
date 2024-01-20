@@ -12,7 +12,7 @@ class SiteController < ActionController::Base
 
     def index
         @partners = Partner.all
-        @members = Member.all
+        @members = Member.where(status: true)
     end
 
     def about

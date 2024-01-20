@@ -25,7 +25,7 @@
                                         </div>
                                         <div class="col-md-6">
                                                 <%= f.input :company_logo, label: 'Link do logotipo' %>
-                                                <%= f.association :pack, label: 'Selecionar o Pacote' %>
+                                                <%= f.association :pack, :collection => Pack.all.map { |pac| ["#{pac.name} -  #{pac.price.to_kwanza}", pac.id] }, include_blank: false, label: 'Selecionar o Pacote' %>
 
                                                 <hr>
 

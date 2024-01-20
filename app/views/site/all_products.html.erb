@@ -12,7 +12,12 @@
                     <% @products.each do |product| %>
                         <div class="col-md-4">
                             <div class="card">
-                                <img src="/images/site/icons/icon07.jpg" class="card-img-top" alt="...">
+                                <% if product.picture.attached? %>
+                                    <%= image_tag(product.picture, class: "card-img-top") %>                                  
+                                <% else %>
+                                    <img src="/images/site/icons/icon07.jpg" class="card-img-top" alt="...">
+                                <% end %>
+
                                 <div class="card-body">
                                     <h5 class="card-title"><%= product.name %></h5>
                                     <p styele="font-size: 13px;line-height: 22px">
