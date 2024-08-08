@@ -39,7 +39,9 @@
 
         <%= yield %>
 
-        <a class="whatsapp pulse" href="https://api.whatsapp.com/message/V4YJVYLLWUTVA1" target="_blank"><%= image_tag '/images/networks/whatsapp.png', width: '80' %></a>
+        <a class="whatsapp pulse" href="http://grupojk.caster.fm/" target="_blank">
+            <%= image_tag '/images/networks/radio.png', width: '80' %>
+        </a>
     </body>
 </html>
 
@@ -55,11 +57,11 @@
         transform: translate(-100, -50%); 
         width: 50px; 
         height: 50px; 
-        background: #35aa49; 
-        border: 2px solid #35aa49; 
+        background: #fff; 
+        border: 2px solid #fff; 
         border-radius: 50%; 
         box-sizing: border-box; 
-        box-shadow: 0 0 0 36px #242563, 0 0 0 40px #35aa49; 
+        box-shadow: 0 0 0 36px #fff, 0 0 0 40px #2c2e84; 
     } 
 
     .pulse:before, .pulse:after { 
@@ -69,7 +71,7 @@
         top: -30px; 
         right: -30px; 
         bottom: -30px; 
-        border: 2px solid #33ff00; 
+        border: 2px solid #2c2e84; 
         border-radius: 50%; 
         animation: animate 2s linear infinite 
     } 
